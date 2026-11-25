@@ -2,7 +2,9 @@ cff-version: 1.2.0
 message: "If you use this benchmark, please cite it as below."
 title: "pptx-render-bench"
 authors:
-  - name: "Ava Daniels"
+  - family-names: "Yanchina"
+    given-names: "Velislava"
+    affiliation: "avadaniels-labs"
 version: 1.1.0
 date-released: 2026-11-25
 license: Apache-2.0

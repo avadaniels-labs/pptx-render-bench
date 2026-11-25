@@ -1,6 +1,6 @@
 ---
 title: "pptx-render-bench: Measuring Offline PPTX Rendering Fidelity against PowerPoint"
-author: "Ava Daniels (avadaniels-labs)"
+author: "Velislava Yanchina (avadaniels-labs)"
 date: "November 2026 — release 1.1.0"
 ---
 
