@@ -1,4 +1,4 @@
-# PPTX rendering fidelity benchmark, v1 (frozen build v45)
+# PPTX rendering fidelity benchmark, v1.1.0 (frozen build v45, 195-font profile)
 
 This benchmark asks how closely an offline renderer reproduces Microsoft PowerPoint's own slide images.
 Each slide of each deck is rendered by two engines on Linux:
@@ -14,13 +14,14 @@ Rust win when `rust_ssim >= lo_ssim`. Exact ties count as wins, and no epsilon i
 This package holds **metadata only**: per-slide scores, hashes, fetch scripts, the font profile and the scorer.
 It contains no decks and no images (see [What is not included and why](#what-is-not-included-and-why)).
 
-## Headline results (v45)
+## Headline results (release 1.1.0)
 
-The numbers below are the output of `python3 results/summarize.py`, which reads only the committed CSVs.
+The numbers below are the output of `python3 results/summarize.py`, which reads only the committed CSVs
+(`results/*-v45-font195.csv`).
 
 | Corpus | Decks | Slides scored | Rust >= LibreOffice | Mean SSIM, Rust | Mean SSIM, LibreOffice | Smallest margin |
 |---|---:|---:|---:|---:|---:|---:|
-| PPTArena | 99 | 971 (+8 invalid) | **970 / 971** | **0.9439** | 0.8884 | -0.00199 (080/7) |
+| PPTArena | 99 | 979 (0 invalid) | **978 / 979** | **0.9438** | 0.8881 | -0.00199 (080/7) |
 | HF50 | 45 | 895 | **895 / 895** | **0.9697** | 0.9085 | +0.00024 |
 
 - **One exception, PPTArena 080 slide 7** (Rust 0.8741, LibreOffice 0.8761). It is scored and reported as a
@@ -28,37 +29,39 @@ The numbers below are the output of `python3 results/summarize.py`, which reads 
   branch with Cambria Math, whose glyph ink grows the line height. LibreOffice and the Rust renderer both
   draw the stored fallback picture. No freely licensed font reproduces Cambria Math's metrics. See
   `results/exceptions.json`.
-- **Eight invalid PPTArena slides**: deck 013, slides 12, 18, 19, 20, 22, 23, 27 and 30. They need the
-  Wingdings 2 bullet U+F096, and no freely licensed font in the frozen set has that glyph, so the LibreOffice
-  PDF font proof cannot pass. They are listed in every report with status `invalid` and are left out of the
-  counts and means. See `results/invalid.json`.
-- Means are arithmetic means over the scored (distinct deck SHA-256, slide index) pairs.
+- **No invalid slides.** In release 1.0.0, eight PPTArena deck-013 slides (12, 18, 19, 20, 22, 23, 27, 30) were
+  invalid: they use the Wingdings 2 bullet U+F096, which no font in the 194-font set covered, so the LibreOffice
+  PDF font proof could not pass. Release 1.1.0 adds one generated CC0 font, "Wingdings 2" geometric bullets
+  (`fonts/build_wingdings2_geometric.py`), to the shared set. All eight slides now prove and are scored, and
+  Rust beats LibreOffice on each (smallest margin +0.046). The renderer binary is unchanged. See
+  `results/invalid.json` and [CHANGELOG.md](CHANGELOG.md).
+- Means are arithmetic means over the scored (distinct deck SHA-256, slide index) pairs. The PPTArena means
+  moved from 0.9439 / 0.8884 to 0.9438 / 0.8881 because the eight new slides are now included.
+- Release 1.0.0's results remain in `results/*-v45.csv` (`python3 results/summarize.py v45`).
 
 ### How these numbers were measured
 
 | | PPTArena | HF50 |
 |---|---|---|
-| CI run | 45544908167 | 45544912297 |
+| CI run | 45587503935 | 45587509588 |
 | Shards | 8 (`e01`–`e08`) | 8 (`s01`–`s08`) |
 | Runner | GitHub-hosted `ubuntu-24.04` aarch64 | same |
 
-In both runs every shard rendered, scored and passed its own independent verification step. That step
-recomputes dimensions, hashes and SSIM from the published bytes. In every shard, the step that afterwards
-pushes the evidence into a Git repository failed with a GitHub-side timeout. Because of that, the workflows'
-cross-shard aggregate steps did not admit a result. The per-slide rows here were read from the verified shard
-artifacts and aggregated offline. Every HF50 deck reports `pass_complete_deck` with the same binary hash and
-renderer source commit.
+Every shard rendered, scored and passed its own independent verification step, which recomputes dimensions,
+hashes and SSIM from the produced bytes. Both runs completed successfully. The per-slide rows were read from the
+verified shard artifacts. Every HF50 deck reports `pass_complete_deck` with the same binary hash. Compared with
+release 1.0.0 (runs 45544908167 and 45544912297), no HF50 score changed. In PPTArena, only decks 010 and 013
+changed, because they are the only decks that use Wingdings 2. 16 of deck 010's changed slides went up for Rust
+and one went down (010/28: 0.8688 to 0.8625, against LibreOffice's 0.7874).
 
 ## Leaderboard
 
 | Renderer | PPTArena W / T / L vs LibreOffice | PPTArena mean SSIM | HF50 W / T / L vs LibreOffice | HF50 mean SSIM |
 |---|---:|---:|---:|---:|
-| Rust renderer v45 | 969 / 1 / 1 of 971 (+8 invalid) | 0.9439 | 895 / 0 / 0 of 895 | 0.9697 |
-| LibreOffice 26.8.3.1 | baseline | 0.8884 | baseline | 0.9085 |
+| Rust renderer v45 | 977 / 1 / 1 of 979 | 0.9438 | 895 / 0 / 0 of 895 | 0.9697 |
+| LibreOffice 26.8.3.1 | baseline | 0.8881 | baseline | 0.9085 |
 
-These are the v1.0.0 results. The eight invalid PPTArena slides (deck 013) are listed in `results/invalid.json`
-and are not scored; a follow-up release will score them. See [LEADERBOARD.md](LEADERBOARD.md); to add a
-renderer, see [SUBMITTING.md](SUBMITTING.md).
+See [LEADERBOARD.md](LEADERBOARD.md). To add a renderer, see [SUBMITTING.md](SUBMITTING.md).
 
 ## Method
 
@@ -82,8 +85,9 @@ that size. No image is resampled or registered, and no region is masked.
 is scored, and any raster that is not fully opaque is rejected. The pinned versions are Python 3.13,
 numpy 2.5.3, pillow 12.3.0, scikit-image 0.26.0 and pymupdf 1.28.2. The scorer is `scoring/ssim.py`.
 
-**Fonts.** Both engines get the same frozen font set (`fonts/font-profile-v45.json`, profile
-`shared_194_office_open_cjk_w10_v1`). The system font paths are isolated and fontconfig 2.15.0 uses Ubuntu
+**Fonts.** Both engines get the same frozen font set (`fonts/font-profile-195.json`, profile
+`shared_195_office_open_cjk_wd2_v1`; release 1.0.0 used `fonts/font-profile-v45.json`, the same set without
+the generated Wingdings 2 face). The system font paths are isolated and fontconfig 2.15.0 uses Ubuntu
 24.04's standard rules (`fonts/fontconfig/`, hash-pinned). Fonts embedded in a deck are used where present.
 A LibreOffice slide counts only if a PDF font proof shows that every embedded font subset comes from a
 font in the frozen set. A slide that fails the proof is a validation failure, never a silent pass.
@@ -106,13 +110,16 @@ and editing tasks are not used. Only the unchanged Original files are rendered.
 
 ```
 README.md
-results/   pptarena-v45.{csv,json}, hf50-v45.{csv,json}   deck, slide, rust_ssim, lo_ssim, delta, status,
-                                                         powerpoint_png_sha256
+results/   pptarena-v45-font195.{csv,json}               release 1.1.0 per-slide rows: deck, slide, rust_ssim,
+           hf50-v45-font195.{csv,json}                   lo_ssim, delta, status, powerpoint_png_sha256
+           pptarena-v45.{csv,json}, hf50-v45.{csv,json}   release 1.0.0 rows (194-font profile)
            exceptions.json, invalid.json, summary.json, summarize.py
 corpus/    pptarena-decks.json, hf50-decks.json          pinned download URL, sha256, size, slide count
            fetch_corpus.py                               download + sha256 check (stdlib only)
-fonts/     font-profile-v45.json                         every font: sha256, size, licence, how to obtain it
+fonts/     font-profile-195.json                         every font: sha256, size, licence, how to obtain it
+           font-profile-v45.json                         the 194-font profile of release 1.0.0
            fetch_fonts.py                                materialize + verify (MS core fonts from the original installers)
+           build_wingdings2_geometric.py                 builds the CC0 "Wingdings 2" geometric bullets face
            vendor/                                       Open Sans (OFL-1.1) only
            licenses/                                     licence texts for the open fonts
            fontconfig/                                   pinned Ubuntu 24.04 fontconfig policy and rule files
@@ -137,12 +144,13 @@ the slide is invalid.
    `python3 fonts/fetch_fonts.py fonts-out/`. The script verifies every file against the profile. It fetches
    the Liberation, Open Sans, DM Sans, Roboto, Source Sans Pro, URW Gothic, STIX Two Math and Noto Sans Bamum
    fonts at pinned revisions. It derives Noto Sans SC Regular and Bold from the pinned variable font. It
-   extracts the 30 Microsoft core fonts from the original `corefonts` installers. Fonts bundled with LibreOffice
+   extracts the 30 Microsoft core fonts from the original `corefonts` installers. It builds the CC0 "Wingdings 2"
+   geometric bullets face with `fonts/build_wingdings2_geometric.py`. Fonts bundled with LibreOffice
    come from installing the pinned LibreOffice tarball. Two groups are not fetched:
    - Twemoji Mozilla (Apache-2.0 / CC-BY-4.0) must be built from source at the listed revision.
    - Four proprietary fonts cannot be obtained here (see below).
 
-   A run of this script on 2026-11-25 materialized 74 fonts, and every hash matched.
+   A run of this script on 2026-11-25 materialized 75 fonts, and every hash matched.
 4. **LibreOffice arm.** Install LibreOffice 26.8.3.1 from the pinned tarball. Point fontconfig at the
    materialized fonts with the pinned rules. Convert each deck to PDF and rasterize each page to the
    reference canvas.
@@ -181,6 +189,8 @@ per-slide scores and the hashes of the references they were measured against are
 - **Third-party files keep their own licences:** `fonts/vendor/` (Open Sans, OFL-1.1), `fonts/licenses/` (the
   licence texts themselves) and `fonts/fontconfig/rules/` (fontconfig and DejaVu configuration files from
   Ubuntu 24.04's fontconfig packages, under their upstream licences).
+- The font built by `fonts/build_wingdings2_geometric.py` is dedicated to the public domain (CC0-1.0,
+  `fonts/licenses/Wingdings2-Geometric-CC0-1.0.txt`). It is not Microsoft's Wingdings 2.
 - The decks, reference images and fonts referenced by the fetch scripts are not covered by these licences.
 
 To cite, see [CITATION.cff](CITATION.cff).

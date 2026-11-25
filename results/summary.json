@@ -1,20 +1,20 @@
 {
+ "result_set": "v45-font195",
  "pptarena": {
   "positions": 979,
   "decks": 99,
-  "scored_slides": 971,
-  "invalid_slides": 8,
-  "rust_ge_lo": 970,
+  "scored_slides": 979,
+  "invalid_slides": 0,
+  "rust_ge_lo": 978,
   "rust_lt_lo": [
    "pptarena-080/7"
   ],
-  "mean_rust_ssim": 0.9439,
-  "mean_lo_ssim": 0.8884,
+  "mean_rust_ssim": 0.9438,
+  "mean_lo_ssim": 0.8881,
   "min_delta": -0.00199,
   "status_counts": {
-   "invalid": 8,
    "loss": 1,
-   "pass": 970
+   "pass": 978
   }
  },
  "hf50": {

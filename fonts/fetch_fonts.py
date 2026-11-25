@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """Materialize the v45 supplemental + fallback fonts into one directory and verify every SHA-256.
 
-usage: python3 fonts/fetch_fonts.py OUT_DIR [--skip-corefonts] [--skip-cjk]
+usage: python3 fonts/fetch_fonts.py OUT_DIR [--profile fonts/font-profile-195.json] [--skip-corefonts] [--skip-cjk]
 
-Sources, per fonts/font-profile-v45.json:
+Sources, per the profile (default fonts/font-profile-195.json, release 1.1.0; font-profile-v45.json is 1.0.0):
   vendored                  copied from fonts/vendor/ (Open Sans, OFL-1.1)
   url / zip_member          downloaded from the pinned upstream revision or release asset
   cabextract                Microsoft Core Fonts extracted from the original corefonts installers
@@ -11,6 +11,8 @@ Sources, per fonts/font-profile-v45.json:
                             inside each installer (Licen.TXT).
   variable_instance         Noto Sans SC Regular/Bold, instanced from the pinned variable font with
                             fontTools 4.66.1 (pip install fonttools==4.66.1); byte-identical only on that release
+  generated                 Wingdings2-Geometric.ttf, built by fonts/build_wingdings2_geometric.py
+                            (fontTools 4.66.1), CC0-1.0
   manual_build              Twemoji Mozilla: upstream ships no pinned binary; build it yourself
   not_included_proprietary  Tahoma Regular/Bold, Sagona Book, Gill Sans Nova Light: not obtainable here
 
@@ -83,9 +85,10 @@ def main() -> int:
     ap.add_argument("out", type=Path)
     ap.add_argument("--skip-corefonts", action="store_true")
     ap.add_argument("--skip-cjk", action="store_true")
+    ap.add_argument("--profile", type=Path, default=HERE / "font-profile-195.json")
     a = ap.parse_args()
     a.out.mkdir(parents=True, exist_ok=True)
-    prof = json.loads((HERE / "font-profile-v45.json").read_text())
+    prof = json.loads(a.profile.read_text())
     failures, skipped = [], []
 
     # Liberation fallback fonts (the Rust base set and LibreOffice fallback)
@@ -129,6 +132,14 @@ def main() -> int:
                 if sha(cab) != acq["cabinet_sha256"]:
                     raise RuntimeError("installer hash mismatch")
                 data = cab_member(cab, acq["member_path"])
+            elif m == "generated":
+                script = PKG / acq["script"]
+                if sha(script.read_bytes()) != acq["script_sha256"]:
+                    raise RuntimeError("generator script changed")
+                with tempfile.TemporaryDirectory() as d:
+                    built = Path(d) / name
+                    subprocess.run([sys.executable, str(script), str(built)], check=True)
+                    data = built.read_bytes()
             elif m == "variable_instance":
                 src = get(acq["source_url"])
                 if sha(src) != acq["source_sha256"]:

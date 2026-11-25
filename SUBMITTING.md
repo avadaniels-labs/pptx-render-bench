@@ -31,5 +31,5 @@ and one row to [LEADERBOARD.md](LEADERBOARD.md).
 - **Report every slide.** Failures and crashes are rows with status `failure` and count as losses; nothing is
   dropped. Means are over all scored slides.
 - **Disclose fonts.** List every font file available to the renderer (name and SHA-256). Using the published
-  font profile (`fonts/font-profile-v45.json`) makes results directly comparable; anything else must be stated.
+  font profile (`fonts/font-profile-195.json`) makes results directly comparable; anything else must be stated.
 - `python3 results/summarize.py`-style counts in your PR description must be reproducible from your CSV.

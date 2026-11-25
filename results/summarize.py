@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """Recompute the headline numbers from the committed per-slide CSVs (stdlib only).
 
-usage: python3 results/summarize.py
+usage: python3 results/summarize.py [RESULT_SET]
+RESULT_SET defaults to v45-font195 (release 1.1.0); v45 gives release 1.0.0.
 """
 import csv
 import json
@@ -31,4 +32,7 @@ def summary(path: Path) -> dict:
 
 
 if __name__ == "__main__":
-    print(json.dumps({"pptarena": summary(HERE / "pptarena-v45.csv"), "hf50": summary(HERE / "hf50-v45.csv")}, indent=1))
+    import sys
+    tag = sys.argv[1] if len(sys.argv) > 1 else "v45-font195"
+    print(json.dumps({"result_set": tag, "pptarena": summary(HERE / f"pptarena-{tag}.csv"),
+                      "hf50": summary(HERE / f"hf50-{tag}.csv")}, indent=1))

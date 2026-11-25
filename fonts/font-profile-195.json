@@ -1,0 +1,915 @@
+{
+ "schema": "public-benchmark-font-profile-v1",
+ "profile_id": "shared_195_office_open_cjk_wd2_v1",
+ "shared_font_manifest_sha256": "4812fd6b5f02ac2221479bcb23523d9003c7e16a3bf45928ec192a8e2aedd3c5",
+ "stock_font_files": 195,
+ "source_manifest_sha256": "2133ed75b0efba1cc40f1ea7e1aed3c664cc45470b174c8f41d9e74fe336b9ad",
+ "rust_experiment_env": {
+  "PPTX_TEXT_EXPERIMENT_DEVICE_MATTE": "opaque_solid",
+  "PPTX_TEXT_EXPERIMENT_METRICS": "os2_points",
+  "PPTX_TEXT_EXPERIMENT_PICTURE_JPEG": "native_raster"
+ },
+ "fontconfig_policy": {
+  "path": "fonts/fontconfig/ubuntu-24.04-standard-v1.json",
+  "sha256": "cbac2c1f9a567083d5c971514bf4ce8350a3ed1647baf94f3b70259210a30e17"
+ },
+ "libreoffice_bundled_inventory": {
+  "path": "fonts/lo-bundled-font-inventory-26.8.3.json",
+  "sha256": "3e5c84e102086ea57c7706f7fb7065f3813357f6d21d7214fb0e99dc2f546802",
+  "note": "Fonts shipped inside the pinned LibreOffice 26.8.3 tarball; obtained by installing it."
+ },
+ "liberation_fallback": {
+  "archive_url": "https://github.com/liberationfonts/liberation-fonts/files/7261482/liberation-fonts-ttf-2.1.5.tar.gz",
+  "archive_sha256": "7191c669bf38899f73a2094ed00f7b800553364f90e2637010a69c0e268f25d0",
+  "license_file": "fonts/licenses/Liberation-OFL.txt",
+  "fonts": {
+   "LiberationMono-Bold.ttf": "bd62a0672d0b9b6710b01df434c80ad54fa5f0835207eb7b17b7a761463067bb",
+   "LiberationMono-BoldItalic.ttf": "79451f3c09fe25116098853b7a2ca6e2436220ccc11af022979adbcf195be130",
+   "LiberationMono-Italic.ttf": "605c01c711b44480a7508d349dfbf3264e81fa43d69e61cfa7d10b86e764c4d1",
+   "LiberationMono-Regular.ttf": "f2b83c763e8afd21709333370bed4774337fae82267937e2b5aea7e2fbd922c1",
+   "LiberationSans-Bold.ttf": "788abee4c806d660e8aee46689dd8540cd4bb98da03dcc9d171ce3efd99a9173",
+   "LiberationSans-BoldItalic.ttf": "698da70fc191cc5f33ad4d6d3fe830fe4624b898ea2e3169955928b7c491f1ee",
+   "LiberationSans-Italic.ttf": "e5bae5c4cde31f22142753855f4f8fb86da6ff39955ed3c0a11248b0d16948b0",
+   "LiberationSans-Regular.ttf": "76d04c18ea243f426b7de1f3ad208e927008f961dc5945e5aad352d0dfde8ee8",
+   "LiberationSerif-Bold.ttf": "d754ba427cfe0bca54ae052384baa8f842da5bd6550ad4da024ac441e7a7d5ce",
+   "LiberationSerif-BoldItalic.ttf": "f17db8af71e24d2066b587546021d4f0b296be389512b658dec3c09affeb11a7",
+   "LiberationSerif-Italic.ttf": "0e3dea9f8d613e006ccfa62201f33e265d19167bd0907725c3e145368b04fc2e",
+   "LiberationSerif-Regular.ttf": "058ea80864aef09a23f45cbec2bb5400bc3dfbdea01c3f10538a21fcb497fb74"
+  }
+ },
+ "supplemental_fonts": [
+  {
+   "name": "TwemojiMozilla.ttf",
+   "sha256": "1a04f7bd9bd74434797e61b48b6e00f07740dd98458d9d6f8927a039bc17688c",
+   "size_bytes": 2695116,
+   "spdx": "Apache-2.0 AND CC-BY-4.0",
+   "license_file": "fonts/licenses/TwemojiMozilla-LICENSE.md",
+   "acquisition": {
+    "method": "manual_build",
+    "upstream": "https://github.com/poppingmoon/twemoji-colr/tree/92fb18cf8fe9b2f9942da86de9da383fe090d965",
+    "revision": "92fb18cf8fe9b2f9942da86de9da383fe090d965",
+    "note": "Upstream publishes no pinned binary; build from source at the revision and check sha256."
+   }
+  },
+  {
+   "name": "NotoSansBamum.ttf",
+   "sha256": "ac9c498f2030192040e2c5541302ed428a81184ff4635faacd32417a58d83e53",
+   "size_bytes": 204724,
+   "spdx": "OFL-1.1",
+   "license_file": "fonts/licenses/NotoSansBamum-OFL.txt",
+   "acquisition": {
+    "method": "url",
+    "url": "https://raw.githubusercontent.com/google/fonts/06bfe0d62a98375cb09c942fa18e68bd32cff057/ofl/notosansbamum/NotoSansBamum%5Bwght%5D.ttf"
+   }
+  },
+  {
+   "name": "DMSans-Bold.ttf",
+   "sha256": "9d801f8a966a9860a9fd2921a54362a7d7058c7821e2cafc7f75ed055884a034",
+   "size_bytes": 73452,
+   "spdx": "OFL-1.1",
+   "license_file": "fonts/licenses/DMSans-OFL.txt",
+   "acquisition": {
+    "method": "url",
+    "url": "https://raw.githubusercontent.com/googlefonts/dm-fonts/d0520ba03bd780f5dccb3024854463d44f699b78/Sans/Exports/DMSans-Bold.ttf"
+   }
+  },
+  {
+   "name": "DMSans-Medium.ttf",
+   "sha256": "4f6a909db85e054e53cd180fe781cfe048416cdd87f7365ac2871c8d646a9033",
+   "size_bytes": 73300,
+   "spdx": "OFL-1.1",
+   "license_file": "fonts/licenses/DMSans-OFL.txt",
+   "acquisition": {
+    "method": "url",
+    "url": "https://raw.githubusercontent.com/googlefonts/dm-fonts/d0520ba03bd780f5dccb3024854463d44f699b78/Sans/Exports/DMSans-Medium.ttf"
+   }
+  },
+  {
+   "name": "DMSans-Regular.ttf",
+   "sha256": "1adb096acaa3d14f5ed678e99b808b0c8800f62cb342fa5c276298ad8030b458",
+   "size_bytes": 73524,
+   "spdx": "OFL-1.1",
+   "license_file": "fonts/licenses/DMSans-OFL.txt",
+   "acquisition": {
+    "method": "url",
+    "url": "https://raw.githubusercontent.com/googlefonts/dm-fonts/d0520ba03bd780f5dccb3024854463d44f699b78/Sans/Exports/DMSans-Regular.ttf"
+   }
+  },
+  {
+   "name": "Roboto-Black.ttf",
+   "sha256": "2599be89df965aaf665e226a327d0d2544569f106e527feb74b8417268d4dfaa",
+   "size_bytes": 472692,
+   "spdx": "Apache-2.0",
+   "license_file": "fonts/licenses/Roboto-LICENSE.txt",
+   "acquisition": {
+    "method": "zip_member",
+    "archive_url": "https://github.com/googlefonts/roboto-3-classic/releases/download/v3.004/Roboto_v3.004.zip",
+    "archive_size_bytes": 28016657,
+    "member_path": "hinted/static/Roboto-Black.ttf"
+   }
+  },
+  {
+   "name": "Roboto-Bold.ttf",
+   "sha256": "464b4afcc2f464a3d3a76c4dbeb86f3718f8d10e3ecdded96368abf7d63f1fb8",
+   "size_bytes": 471760,
+   "spdx": "Apache-2.0",
+   "license_file": "fonts/licenses/Roboto-LICENSE.txt",
+   "acquisition": {
+    "method": "zip_member",
+    "archive_url": "https://github.com/googlefonts/roboto-3-classic/releases/download/v3.004/Roboto_v3.004.zip",
+    "archive_size_bytes": 28016657,
+    "member_path": "hinted/static/Roboto-Bold.ttf"
+   }
+  },
+  {
+   "name": "Roboto-BoldItalic.ttf",
+   "sha256": "ad840a6e579f0629e6af381ab0ba7ecbd5926416c34befcc96095b982f9780ef",
+   "size_bytes": 491704,
+   "spdx": "Apache-2.0",
+   "license_file": "fonts/licenses/Roboto-LICENSE.txt",
+   "acquisition": {
+    "method": "zip_member",
+    "archive_url": "https://github.com/googlefonts/roboto-3-classic/releases/download/v3.004/Roboto_v3.004.zip",
+    "archive_size_bytes": 28016657,
+    "member_path": "hinted/static/Roboto-BoldItalic.ttf"
+   }
+  },
+  {
+   "name": "Roboto-Italic.ttf",
+   "sha256": "1ec57af951faa27f2c4220e3d00da193cc8989d106a5ca80e3167b8b806f7952",
+   "size_bytes": 488896,
+   "spdx": "Apache-2.0",
+   "license_file": "fonts/licenses/Roboto-LICENSE.txt",
+   "acquisition": {
+    "method": "zip_member",
+    "archive_url": "https://github.com/googlefonts/roboto-3-classic/releases/download/v3.004/Roboto_v3.004.zip",
+    "archive_size_bytes": 28016657,
+    "member_path": "hinted/static/Roboto-Italic.ttf"
+   }
+  },
+  {
+   "name": "Roboto-Light.ttf",
+   "sha256": "fed71baa577a0237c96160f8bf4b8b9f293cc6dd82afc623c6e5b004f3492400",
+   "size_bytes": 469864,
+   "spdx": "Apache-2.0",
+   "license_file": "fonts/licenses/Roboto-LICENSE.txt",
+   "acquisition": {
+    "method": "zip_member",
+    "archive_url": "https://github.com/googlefonts/roboto-3-classic/releases/download/v3.004/Roboto_v3.004.zip",
+    "archive_size_bytes": 28016657,
+    "member_path": "hinted/static/Roboto-Light.ttf"
+   }
+  },
+  {
+   "name": "Roboto-Regular.ttf",
+   "sha256": "2f420c946304315909c1672b14cb4343a3d70c45879c39b85d2345a75850c287",
+   "size_bytes": 469544,
+   "spdx": "Apache-2.0",
+   "license_file": "fonts/licenses/Roboto-LICENSE.txt",
+   "acquisition": {
+    "method": "zip_member",
+    "archive_url": "https://github.com/googlefonts/roboto-3-classic/releases/download/v3.004/Roboto_v3.004.zip",
+    "archive_size_bytes": 28016657,
+    "member_path": "hinted/static/Roboto-Regular.ttf"
+   }
+  },
+  {
+   "name": "RobotoCondensed-Bold.ttf",
+   "sha256": "e2328a4991b61dbc2d1e0a1efdaa456717bc244026b2e042ab2b952034394fcd",
+   "size_bytes": 470572,
+   "spdx": "Apache-2.0",
+   "license_file": "fonts/licenses/Roboto-LICENSE.txt",
+   "acquisition": {
+    "method": "zip_member",
+    "archive_url": "https://github.com/googlefonts/roboto-3-classic/releases/download/v3.004/Roboto_v3.004.zip",
+    "archive_size_bytes": 28016657,
+    "member_path": "hinted/static/RobotoCondensed-Bold.ttf"
+   }
+  },
+  {
+   "name": "RobotoCondensed-Regular.ttf",
+   "sha256": "1cb579c83cbb0534acb2201aeed97d9f3b5f1026e0f53b1315dc9f6257745c7a",
+   "size_bytes": 468696,
+   "spdx": "Apache-2.0",
+   "license_file": "fonts/licenses/Roboto-LICENSE.txt",
+   "acquisition": {
+    "method": "zip_member",
+    "archive_url": "https://github.com/googlefonts/roboto-3-classic/releases/download/v3.004/Roboto_v3.004.zip",
+    "archive_size_bytes": 28016657,
+    "member_path": "hinted/static/RobotoCondensed-Regular.ttf"
+   }
+  },
+  {
+   "name": "SourceSansPro-Bold.ttf",
+   "sha256": "da4f442e66843990825ed4757e27ad3442cad83f9844cc503e8ece85e00f77f2",
+   "size_bytes": 290916,
+   "spdx": "OFL-1.1",
+   "license_file": "fonts/licenses/SourceSansPro-OFL.txt",
+   "acquisition": {
+    "method": "url",
+    "url": "https://raw.githubusercontent.com/google/fonts/f1467d58f677b4be9450f2f39f10a600d3846258/ofl/sourcesanspro/SourceSansPro-Bold.ttf"
+   }
+  },
+  {
+   "name": "SourceSansPro-BoldItalic.ttf",
+   "sha256": "4413cbf92a508e6a6eb0a089ee9bcf1b94f0b366ea755c5c64b6d4755f160c40",
+   "size_bytes": 103200,
+   "spdx": "OFL-1.1",
+   "license_file": "fonts/licenses/SourceSansPro-OFL.txt",
+   "acquisition": {
+    "method": "url",
+    "url": "https://raw.githubusercontent.com/google/fonts/f1467d58f677b4be9450f2f39f10a600d3846258/ofl/sourcesanspro/SourceSansPro-BoldItalic.ttf"
+   }
+  },
+  {
+   "name": "SourceSansPro-Italic.ttf",
+   "sha256": "dac7846e443ec58c0802cd6fa55836060a62d8a7448c0bccff5242bac9e71d0e",
+   "size_bytes": 103828,
+   "spdx": "OFL-1.1",
+   "license_file": "fonts/licenses/SourceSansPro-OFL.txt",
+   "acquisition": {
+    "method": "url",
+    "url": "https://raw.githubusercontent.com/google/fonts/f1467d58f677b4be9450f2f39f10a600d3846258/ofl/sourcesanspro/SourceSansPro-Italic.ttf"
+   }
+  },
+  {
+   "name": "SourceSansPro-Light.ttf",
+   "sha256": "5705ecafdaa64d8af74d0c03f89272a65cfee9f7e62b55016a8dcbe4a69b6f86",
+   "size_bytes": 292680,
+   "spdx": "OFL-1.1",
+   "license_file": "fonts/licenses/SourceSansPro-OFL.txt",
+   "acquisition": {
+    "method": "url",
+    "url": "https://raw.githubusercontent.com/google/fonts/f1467d58f677b4be9450f2f39f10a600d3846258/ofl/sourcesanspro/SourceSansPro-Light.ttf"
+   }
+  },
+  {
+   "name": "SourceSansPro-LightItalic.ttf",
+   "sha256": "93ed5542962715b40b4a63779206cd099d1ca865f0ee096a5cddce265be0c356",
+   "size_bytes": 104156,
+   "spdx": "OFL-1.1",
+   "license_file": "fonts/licenses/SourceSansPro-OFL.txt",
+   "acquisition": {
+    "method": "url",
+    "url": "https://raw.githubusercontent.com/google/fonts/f1467d58f677b4be9450f2f39f10a600d3846258/ofl/sourcesanspro/SourceSansPro-LightItalic.ttf"
+   }
+  },
+  {
+   "name": "SourceSansPro-Regular.ttf",
+   "sha256": "71d10a86b4c54a5a9c0c8b467e53ac67d79edb96c956e4e9f65a7074dfb9992a",
+   "size_bytes": 293516,
+   "spdx": "OFL-1.1",
+   "license_file": "fonts/licenses/SourceSansPro-OFL.txt",
+   "acquisition": {
+    "method": "url",
+    "url": "https://raw.githubusercontent.com/google/fonts/f1467d58f677b4be9450f2f39f10a600d3846258/ofl/sourcesanspro/SourceSansPro-Regular.ttf"
+   }
+  },
+  {
+   "name": "SourceSansPro-Semibold.ttf",
+   "sha256": "1abd7bd14daea0c793865e0df0e17b3f07ec1cbf22855676c4716726b930f17e",
+   "size_bytes": 291864,
+   "spdx": "OFL-1.1",
+   "license_file": "fonts/licenses/SourceSansPro-OFL.txt",
+   "acquisition": {
+    "method": "url",
+    "url": "https://raw.githubusercontent.com/google/fonts/f1467d58f677b4be9450f2f39f10a600d3846258/ofl/sourcesanspro/SourceSansPro-Semibold.ttf"
+   }
+  },
+  {
+   "name": "Tahoma-Regular.ttf",
+   "sha256": "359413e76969fc8a03e0acf91b355a98bb13c42472614e54bff5c8e4f4817fbb",
+   "size_bytes": 681120,
+   "spdx": null,
+   "acquisition": {
+    "method": "not_included_proprietary",
+    "note": "Installed with Microsoft Office / macOS; no public redistributable source."
+   }
+  },
+  {
+   "name": "Tahoma-Bold.ttf",
+   "sha256": "fc1863ab504b9c160abaa12b92296363db72f5b759311982510a85fe2aa9ff4f",
+   "size_bytes": 626928,
+   "spdx": null,
+   "acquisition": {
+    "method": "not_included_proprietary",
+    "note": "Installed with Microsoft Office / macOS; no public redistributable source."
+   }
+  },
+  {
+   "name": "SagonaBook.ttf",
+   "sha256": "6b2351c4a4ce172bdc7ef832b744de08638e65564592a46da46810e8344c31cb",
+   "size_bytes": 91164,
+   "spdx": null,
+   "acquisition": {
+    "method": "not_included_proprietary",
+    "note": "Installed with Microsoft Office / macOS; no public redistributable source."
+   }
+  },
+  {
+   "name": "GillSansNova-Light.ttf",
+   "sha256": "050ecf9cc753d72c6bb30113438dca5744682e4a68dcd2b0ba19fe531f3f10d6",
+   "size_bytes": 173944,
+   "spdx": null,
+   "acquisition": {
+    "method": "not_included_proprietary",
+    "note": "Installed with Microsoft Office / macOS; no public redistributable source."
+   }
+  },
+  {
+   "name": "OpenSans-Regular.ttf",
+   "sha256": "c53aceea2dcf5b4098099c0c4d0a061d17e178a049317b42a422b1a9f7f8eb59",
+   "size_bytes": 147528,
+   "spdx": "OFL-1.1",
+   "license_file": "fonts/licenses/OpenSans-OFL.txt",
+   "acquisition": {
+    "method": "vendored",
+    "path": "fonts/vendor/OpenSans-Regular.ttf",
+    "upstream_url": "https://raw.githubusercontent.com/googlefonts/opensans/6cbc400d4855abee59d85c4ed871d510399bce7b/fonts/ttf/OpenSans-Regular.ttf"
+   }
+  },
+  {
+   "name": "OpenSans-Italic.ttf",
+   "sha256": "93bc1bb6abf4e6b7c75d7131714061d5b57cc478abcabe4cb3519bb38fb917aa",
+   "size_bytes": 153256,
+   "spdx": "OFL-1.1",
+   "license_file": "fonts/licenses/OpenSans-OFL.txt",
+   "acquisition": {
+    "method": "vendored",
+    "path": "fonts/vendor/OpenSans-Italic.ttf",
+    "upstream_url": "https://raw.githubusercontent.com/googlefonts/opensans/6cbc400d4855abee59d85c4ed871d510399bce7b/fonts/ttf/OpenSans-Italic.ttf"
+   }
+  },
+  {
+   "name": "OpenSans-Bold.ttf",
+   "sha256": "27da758f4dcac9a65abe914c13b463b42982b9909bc65713424099f4810bd1e6",
+   "size_bytes": 147264,
+   "spdx": "OFL-1.1",
+   "license_file": "fonts/licenses/OpenSans-OFL.txt",
+   "acquisition": {
+    "method": "vendored",
+    "path": "fonts/vendor/OpenSans-Bold.ttf",
+    "upstream_url": "https://raw.githubusercontent.com/googlefonts/opensans/6cbc400d4855abee59d85c4ed871d510399bce7b/fonts/ttf/OpenSans-Bold.ttf"
+   }
+  },
+  {
+   "name": "OpenSans-BoldItalic.ttf",
+   "sha256": "d672a770037104b6af45e1336b3d3c1729c8aea940f81e010f5a8a7319c29a21",
+   "size_bytes": 153308,
+   "spdx": "OFL-1.1",
+   "license_file": "fonts/licenses/OpenSans-OFL.txt",
+   "acquisition": {
+    "method": "vendored",
+    "path": "fonts/vendor/OpenSans-BoldItalic.ttf",
+    "upstream_url": "https://raw.githubusercontent.com/googlefonts/opensans/6cbc400d4855abee59d85c4ed871d510399bce7b/fonts/ttf/OpenSans-BoldItalic.ttf"
+   }
+  },
+  {
+   "name": "OpenSans-Light.ttf",
+   "sha256": "3472097ec4d9e57228cbfad3c9911e53923664d3df86568d0b05d674399e034e",
+   "size_bytes": 143788,
+   "spdx": "OFL-1.1",
+   "license_file": "fonts/licenses/OpenSans-OFL.txt",
+   "acquisition": {
+    "method": "vendored",
+    "path": "fonts/vendor/OpenSans-Light.ttf",
+    "upstream_url": "https://raw.githubusercontent.com/googlefonts/opensans/6cbc400d4855abee59d85c4ed871d510399bce7b/fonts/ttf/OpenSans-Light.ttf"
+   }
+  },
+  {
+   "name": "OpenSans-SemiBold.ttf",
+   "sha256": "4a413711684a9dd564ef0f1c10cb62b5d9f7eb6df2cff962f5341a6ecd5f64ae",
+   "size_bytes": 150592,
+   "spdx": "OFL-1.1",
+   "license_file": "fonts/licenses/OpenSans-OFL.txt",
+   "acquisition": {
+    "method": "vendored",
+    "path": "fonts/vendor/OpenSans-SemiBold.ttf",
+    "upstream_url": "https://raw.githubusercontent.com/googlefonts/opensans/6cbc400d4855abee59d85c4ed871d510399bce7b/fonts/ttf/OpenSans-SemiBold.ttf"
+   }
+  },
+  {
+   "name": "NotoSansSC-Regular.ttf",
+   "sha256": "26305be85f5378dc7d53f3dfa6c852a7e46621b226423400c1821aca9fc01c41",
+   "size_bytes": 10595876,
+   "spdx": "OFL-1.1",
+   "license_file": "fonts/licenses/NotoSansSC-OFL.txt",
+   "acquisition": {
+    "method": "variable_instance",
+    "source_url": "https://raw.githubusercontent.com/google/fonts/a85815a42757630ce188fdad368c2dfc444d4773/ofl/notosanssc/NotoSansSC%5Bwght%5D.ttf",
+    "source_sha256": "a3041811a78c361b1de50f953c805e0244951c21c5bd412f7232ef0d899af0da",
+    "source_size_bytes": 17772300,
+    "location": {
+     "wght": 400
+    },
+    "instancer": "fonttools-4.66.1-instantiate-variable-font-update-names-v1"
+   }
+  },
+  {
+   "name": "NotoSansSC-Bold.ttf",
+   "sha256": "8c347cbab488be9cda57350887e4d0d6d0f4ffd533aa5d6a3bfdae249b5da880",
+   "size_bytes": 10585400,
+   "spdx": "OFL-1.1",
+   "license_file": "fonts/licenses/NotoSansSC-OFL.txt",
+   "acquisition": {
+    "method": "variable_instance",
+    "source_url": "https://raw.githubusercontent.com/google/fonts/a85815a42757630ce188fdad368c2dfc444d4773/ofl/notosanssc/NotoSansSC%5Bwght%5D.ttf",
+    "source_sha256": "a3041811a78c361b1de50f953c805e0244951c21c5bd412f7232ef0d899af0da",
+    "source_size_bytes": 17772300,
+    "location": {
+     "wght": 700
+    },
+    "instancer": "fonttools-4.66.1-instantiate-variable-font-update-names-v1"
+   }
+  },
+  {
+   "name": "URWGothic-Book.ttf",
+   "sha256": "1860f85c10347a7a3b00137d08ccc0c71ebd5b780a0436dc1df590344d34b952",
+   "size_bytes": 152668,
+   "spdx": "AGPL-3.0-only WITH LicenseRef-URW-Base35-Font-Exception",
+   "license_file": "fonts/licenses/URWBase35-LICENSE.txt",
+   "acquisition": {
+    "method": "url",
+    "url": "https://raw.githubusercontent.com/ArtifexSoftware/urw-base35-fonts/3c0ba3b5687632dfc66526544a4e811fe0ec0cd9/fonts/URWGothic-Book.ttf"
+   }
+  },
+  {
+   "name": "URWGothic-BookOblique.ttf",
+   "sha256": "ad91b4ffeec1c7d9e1664d817a1be043a6af691ca3f961f004f5e51840986c5c",
+   "size_bytes": 154700,
+   "spdx": "AGPL-3.0-only WITH LicenseRef-URW-Base35-Font-Exception",
+   "license_file": "fonts/licenses/URWBase35-LICENSE.txt",
+   "acquisition": {
+    "method": "url",
+    "url": "https://raw.githubusercontent.com/ArtifexSoftware/urw-base35-fonts/3c0ba3b5687632dfc66526544a4e811fe0ec0cd9/fonts/URWGothic-BookOblique.ttf"
+   }
+  },
+  {
+   "name": "URWGothic-Demi.ttf",
+   "sha256": "6de372e48aae93601d97f948b7aa0865977dbbd7f1835e1c6879bd8eabc26caa",
+   "size_bytes": 153268,
+   "spdx": "AGPL-3.0-only WITH LicenseRef-URW-Base35-Font-Exception",
+   "license_file": "fonts/licenses/URWBase35-LICENSE.txt",
+   "acquisition": {
+    "method": "url",
+    "url": "https://raw.githubusercontent.com/ArtifexSoftware/urw-base35-fonts/3c0ba3b5687632dfc66526544a4e811fe0ec0cd9/fonts/URWGothic-Demi.ttf"
+   }
+  },
+  {
+   "name": "URWGothic-DemiOblique.ttf",
+   "sha256": "536cb6a663f494df82f0333ed60588af0a6910ca307bd5281915f940125a9813",
+   "size_bytes": 154952,
+   "spdx": "AGPL-3.0-only WITH LicenseRef-URW-Base35-Font-Exception",
+   "license_file": "fonts/licenses/URWBase35-LICENSE.txt",
+   "acquisition": {
+    "method": "url",
+    "url": "https://raw.githubusercontent.com/ArtifexSoftware/urw-base35-fonts/3c0ba3b5687632dfc66526544a4e811fe0ec0cd9/fonts/URWGothic-DemiOblique.ttf"
+   }
+  },
+  {
+   "name": "STIXTwoMath-Regular.ttf",
+   "sha256": "562551b15b836e6e01d1b7350909baf3c8c8d83260c1190fbf4544333e6936de",
+   "size_bytes": 1517976,
+   "spdx": "OFL-1.1",
+   "license_file": "fonts/licenses/STIXTwoMath-OFL.txt",
+   "acquisition": {
+    "method": "url",
+    "url": "https://raw.githubusercontent.com/google/fonts/83c62e30d87daa70216dab6b984d00d20d96d585/ofl/stixtwomath/STIXTwoMath-Regular.ttf"
+   }
+  },
+  {
+   "name": "corefonts-andalemo.ttf",
+   "sha256": "48d9bc613917709d3b0e0f4a6d4fe33a5c544c5035dffe9e90bc11e50e822071",
+   "size_bytes": 105468,
+   "spdx": "LicenseRef-Microsoft-Core-Fonts-EULA",
+   "acquisition": {
+    "method": "cabextract",
+    "cabinet_url": "https://downloads.sourceforge.net/corefonts/andale32.exe",
+    "cabinet_sha256": "0524fe42951adc3a7eb870e32f0920313c71f170c859b5f770d82b4ee111e970",
+    "cabinet_size_bytes": 198384,
+    "member_path": "AndaleMo.TTF"
+   },
+   "license_note": "Microsoft Core Fonts for the Web EULA (Licen.TXT inside each installer). Never committed."
+  },
+  {
+   "name": "corefonts-arial.ttf",
+   "sha256": "35c0f3559d8db569e36c31095b8a60d441643d95f59139de40e23fada819b833",
+   "size_bytes": 275572,
+   "spdx": "LicenseRef-Microsoft-Core-Fonts-EULA",
+   "acquisition": {
+    "method": "cabextract",
+    "cabinet_url": "https://downloads.sourceforge.net/corefonts/arial32.exe",
+    "cabinet_sha256": "85297a4d146e9c87ac6f74822734bdee5f4b2a722d7eaa584b7f2cbf76f478f6",
+    "cabinet_size_bytes": 554208,
+    "member_path": "Arial.TTF"
+   },
+   "license_note": "Microsoft Core Fonts for the Web EULA (Licen.TXT inside each installer). Never committed."
+  },
+  {
+   "name": "corefonts-arialbd.ttf",
+   "sha256": "4044aa6b5bebbc36980206b45b0aaaaa5681552a48bcadb41746d5d1d71fd7b4",
+   "size_bytes": 286620,
+   "spdx": "LicenseRef-Microsoft-Core-Fonts-EULA",
+   "acquisition": {
+    "method": "cabextract",
+    "cabinet_url": "https://downloads.sourceforge.net/corefonts/arial32.exe",
+    "cabinet_sha256": "85297a4d146e9c87ac6f74822734bdee5f4b2a722d7eaa584b7f2cbf76f478f6",
+    "cabinet_size_bytes": 554208,
+    "member_path": "Arialbd.TTF"
+   },
+   "license_note": "Microsoft Core Fonts for the Web EULA (Licen.TXT inside each installer). Never committed."
+  },
+  {
+   "name": "corefonts-ariali.ttf",
+   "sha256": "70ade233175a6a6675e4501461af9326e6f78b1ffdf787ca0da5ab0fc8c9cfd6",
+   "size_bytes": 206132,
+   "spdx": "LicenseRef-Microsoft-Core-Fonts-EULA",
+   "acquisition": {
+    "method": "cabextract",
+    "cabinet_url": "https://downloads.sourceforge.net/corefonts/arial32.exe",
+    "cabinet_sha256": "85297a4d146e9c87ac6f74822734bdee5f4b2a722d7eaa584b7f2cbf76f478f6",
+    "cabinet_size_bytes": 554208,
+    "member_path": "Ariali.TTF"
+   },
+   "license_note": "Microsoft Core Fonts for the Web EULA (Licen.TXT inside each installer). Never committed."
+  },
+  {
+   "name": "corefonts-arialbi.ttf",
+   "sha256": "2f371cd9d96b3ac544519d85c16dc43ceacdfcea35090ee8ddf3ec5857c50328",
+   "size_bytes": 224692,
+   "spdx": "LicenseRef-Microsoft-Core-Fonts-EULA",
+   "acquisition": {
+    "method": "cabextract",
+    "cabinet_url": "https://downloads.sourceforge.net/corefonts/arial32.exe",
+    "cabinet_sha256": "85297a4d146e9c87ac6f74822734bdee5f4b2a722d7eaa584b7f2cbf76f478f6",
+    "cabinet_size_bytes": 554208,
+    "member_path": "Arialbi.TTF"
+   },
+   "license_note": "Microsoft Core Fonts for the Web EULA (Licen.TXT inside each installer). Never committed."
+  },
+  {
+   "name": "corefonts-ariblk.ttf",
+   "sha256": "dad7c04acb26e23dfe4780e79375ca193ddaf68409317e81577a30674668830e",
+   "size_bytes": 117028,
+   "spdx": "LicenseRef-Microsoft-Core-Fonts-EULA",
+   "acquisition": {
+    "method": "cabextract",
+    "cabinet_url": "https://downloads.sourceforge.net/corefonts/arialb32.exe",
+    "cabinet_sha256": "a425f0ffb6a1a5ede5b979ed6177f4f4f4fdef6ae7c302a7b7720ef332fec0a8",
+    "cabinet_size_bytes": 168176,
+    "member_path": "AriBlk.TTF"
+   },
+   "license_note": "Microsoft Core Fonts for the Web EULA (Licen.TXT inside each installer). Never committed."
+  },
+  {
+   "name": "corefonts-comic.ttf",
+   "sha256": "b82c53776058f291382ff7e008d4675839d2dc21eb295c66391f6fb0655d8fc0",
+   "size_bytes": 126364,
+   "spdx": "LicenseRef-Microsoft-Core-Fonts-EULA",
+   "acquisition": {
+    "method": "cabextract",
+    "cabinet_url": "https://downloads.sourceforge.net/corefonts/comic32.exe",
+    "cabinet_sha256": "9c6df3feefde26d4e41d4a4fe5db2a89f9123a772594d7f59afd062625cd204e",
+    "cabinet_size_bytes": 246008,
+    "member_path": "Comic.TTF"
+   },
+   "license_note": "Microsoft Core Fonts for the Web EULA (Licen.TXT inside each installer). Never committed."
+  },
+  {
+   "name": "corefonts-comicbd.ttf",
+   "sha256": "873361465d994994762d0b9845c99fc7baa2a600442ea8db713a7dd19f8b0172",
+   "size_bytes": 111476,
+   "spdx": "LicenseRef-Microsoft-Core-Fonts-EULA",
+   "acquisition": {
+    "method": "cabextract",
+    "cabinet_url": "https://downloads.sourceforge.net/corefonts/comic32.exe",
+    "cabinet_sha256": "9c6df3feefde26d4e41d4a4fe5db2a89f9123a772594d7f59afd062625cd204e",
+    "cabinet_size_bytes": 246008,
+    "member_path": "Comicbd.TTF"
+   },
+   "license_note": "Microsoft Core Fonts for the Web EULA (Licen.TXT inside each installer). Never committed."
+  },
+  {
+   "name": "corefonts-cour.ttf",
+   "sha256": "6715838c52f813f3821549d3f645db9a768bd6f3a43d8f85a89cb6875a546c61",
+   "size_bytes": 302688,
+   "spdx": "LicenseRef-Microsoft-Core-Fonts-EULA",
+   "acquisition": {
+    "method": "cabextract",
+    "cabinet_url": "https://downloads.sourceforge.net/corefonts/courie32.exe",
+    "cabinet_sha256": "bb511d861655dde879ae552eb86b134d6fae67cb58502e6ff73ec5d9151f3384",
+    "cabinet_size_bytes": 646368,
+    "member_path": "cour.ttf"
+   },
+   "license_note": "Microsoft Core Fonts for the Web EULA (Licen.TXT inside each installer). Never committed."
+  },
+  {
+   "name": "corefonts-courbd.ttf",
+   "sha256": "edf8a7c5bfcac2e1fe507faab417137cbddc9071637ef4648238d0768c921e02",
+   "size_bytes": 311508,
+   "spdx": "LicenseRef-Microsoft-Core-Fonts-EULA",
+   "acquisition": {
+    "method": "cabextract",
+    "cabinet_url": "https://downloads.sourceforge.net/corefonts/courie32.exe",
+    "cabinet_sha256": "bb511d861655dde879ae552eb86b134d6fae67cb58502e6ff73ec5d9151f3384",
+    "cabinet_size_bytes": 646368,
+    "member_path": "courbd.ttf"
+   },
+   "license_note": "Microsoft Core Fonts for the Web EULA (Licen.TXT inside each installer). Never committed."
+  },
+  {
+   "name": "corefonts-couri.ttf",
+   "sha256": "f3f6b09855b6700977e214aab5eb9e5be6813976a24f894bd7766e92c732fbe1",
+   "size_bytes": 244156,
+   "spdx": "LicenseRef-Microsoft-Core-Fonts-EULA",
+   "acquisition": {
+    "method": "cabextract",
+    "cabinet_url": "https://downloads.sourceforge.net/corefonts/courie32.exe",
+    "cabinet_sha256": "bb511d861655dde879ae552eb86b134d6fae67cb58502e6ff73ec5d9151f3384",
+    "cabinet_size_bytes": 646368,
+    "member_path": "couri.ttf"
+   },
+   "license_note": "Microsoft Core Fonts for the Web EULA (Licen.TXT inside each installer). Never committed."
+  },
+  {
+   "name": "corefonts-courbi.ttf",
+   "sha256": "66dbfa20b534fba0e203da140fec7276a45a1069e424b1b9c35547538128bbe8",
+   "size_bytes": 234788,
+   "spdx": "LicenseRef-Microsoft-Core-Fonts-EULA",
+   "acquisition": {
+    "method": "cabextract",
+    "cabinet_url": "https://downloads.sourceforge.net/corefonts/courie32.exe",
+    "cabinet_sha256": "bb511d861655dde879ae552eb86b134d6fae67cb58502e6ff73ec5d9151f3384",
+    "cabinet_size_bytes": 646368,
+    "member_path": "courbi.ttf"
+   },
+   "license_note": "Microsoft Core Fonts for the Web EULA (Licen.TXT inside each installer). Never committed."
+  },
+  {
+   "name": "corefonts-georgia.ttf",
+   "sha256": "7d0bb20c632bb59e81a0885f573bd2173f71f73204de9058feb68ce032227072",
+   "size_bytes": 142964,
+   "spdx": "LicenseRef-Microsoft-Core-Fonts-EULA",
+   "acquisition": {
+    "method": "cabextract",
+    "cabinet_url": "https://downloads.sourceforge.net/corefonts/georgi32.exe",
+    "cabinet_sha256": "2c2c7dcda6606ea5cf08918fb7cd3f3359e9e84338dc690013f20cd42e930301",
+    "cabinet_size_bytes": 392440,
+    "member_path": "Georgia.TTF"
+   },
+   "license_note": "Microsoft Core Fonts for the Web EULA (Licen.TXT inside each installer). Never committed."
+  },
+  {
+   "name": "corefonts-georgiab.ttf",
+   "sha256": "82d2fbadb88a8632d7f2e8ad50420c9fd2e7d3cbc0e90b04890213a711b34b93",
+   "size_bytes": 139584,
+   "spdx": "LicenseRef-Microsoft-Core-Fonts-EULA",
+   "acquisition": {
+    "method": "cabextract",
+    "cabinet_url": "https://downloads.sourceforge.net/corefonts/georgi32.exe",
+    "cabinet_sha256": "2c2c7dcda6606ea5cf08918fb7cd3f3359e9e84338dc690013f20cd42e930301",
+    "cabinet_size_bytes": 392440,
+    "member_path": "Georgiab.TTF"
+   },
+   "license_note": "Microsoft Core Fonts for the Web EULA (Licen.TXT inside each installer). Never committed."
+  },
+  {
+   "name": "corefonts-georgiai.ttf",
+   "sha256": "1523f19bda6acca42c47c50da719a12dd34f85cc2606e6a5af15a7728b377b60",
+   "size_bytes": 156668,
+   "spdx": "LicenseRef-Microsoft-Core-Fonts-EULA",
+   "acquisition": {
+    "method": "cabextract",
+    "cabinet_url": "https://downloads.sourceforge.net/corefonts/georgi32.exe",
+    "cabinet_sha256": "2c2c7dcda6606ea5cf08918fb7cd3f3359e9e84338dc690013f20cd42e930301",
+    "cabinet_size_bytes": 392440,
+    "member_path": "Georgiai.TTF"
+   },
+   "license_note": "Microsoft Core Fonts for the Web EULA (Licen.TXT inside each installer). Never committed."
+  },
+  {
+   "name": "corefonts-georgiaz.ttf",
+   "sha256": "c983e037d8e4e694dd0fb0ba2e625bca317d67a41da2dc81e46a374e53d0ec8a",
+   "size_bytes": 158796,
+   "spdx": "LicenseRef-Microsoft-Core-Fonts-EULA",
+   "acquisition": {
+    "method": "cabextract",
+    "cabinet_url": "https://downloads.sourceforge.net/corefonts/georgi32.exe",
+    "cabinet_sha256": "2c2c7dcda6606ea5cf08918fb7cd3f3359e9e84338dc690013f20cd42e930301",
+    "cabinet_size_bytes": 392440,
+    "member_path": "Georgiaz.TTF"
+   },
+   "license_note": "Microsoft Core Fonts for the Web EULA (Licen.TXT inside each installer). Never committed."
+  },
+  {
+   "name": "corefonts-impact.ttf",
+   "sha256": "00f1fc230ac99f9b97ba1a7c214eb5b909a78660cb3826fca7d64c3af5a14848",
+   "size_bytes": 136076,
+   "spdx": "LicenseRef-Microsoft-Core-Fonts-EULA",
+   "acquisition": {
+    "method": "cabextract",
+    "cabinet_url": "https://downloads.sourceforge.net/corefonts/impact32.exe",
+    "cabinet_sha256": "6061ef3b7401d9642f5dfdb5f2b376aa14663f6275e60a51207ad4facf2fccfb",
+    "cabinet_size_bytes": 173288,
+    "member_path": "Impact.TTF"
+   },
+   "license_note": "Microsoft Core Fonts for the Web EULA (Licen.TXT inside each installer). Never committed."
+  },
+  {
+   "name": "corefonts-times.ttf",
+   "sha256": "4e98adeff8ccc8ef4e3ece8d4547e288ff85fdc9c7ca711a4599c234874bbe86",
+   "size_bytes": 330412,
+   "spdx": "LicenseRef-Microsoft-Core-Fonts-EULA",
+   "acquisition": {
+    "method": "cabextract",
+    "cabinet_url": "https://downloads.sourceforge.net/corefonts/times32.exe",
+    "cabinet_sha256": "db56595ec6ef5d3de5c24994f001f03b2a13e37cee27bc25c58f6f43e8f807ab",
+    "cabinet_size_bytes": 661728,
+    "member_path": "Times.TTF"
+   },
+   "license_note": "Microsoft Core Fonts for the Web EULA (Licen.TXT inside each installer). Never committed."
+  },
+  {
+   "name": "corefonts-timesbd.ttf",
+   "sha256": "4357b63cef20c01661a53c5dae70ffd20cb4765503aaed6d38b17a57c5a90bff",
+   "size_bytes": 333900,
+   "spdx": "LicenseRef-Microsoft-Core-Fonts-EULA",
+   "acquisition": {
+    "method": "cabextract",
+    "cabinet_url": "https://downloads.sourceforge.net/corefonts/times32.exe",
+    "cabinet_sha256": "db56595ec6ef5d3de5c24994f001f03b2a13e37cee27bc25c58f6f43e8f807ab",
+    "cabinet_size_bytes": 661728,
+    "member_path": "Timesbd.TTF"
+   },
+   "license_note": "Microsoft Core Fonts for the Web EULA (Licen.TXT inside each installer). Never committed."
+  },
+  {
+   "name": "corefonts-timesi.ttf",
+   "sha256": "c25ae529b4cecdbca148b6ccb862ee0abad770af8b1fd29c8dba619d1b8da78a",
+   "size_bytes": 247092,
+   "spdx": "LicenseRef-Microsoft-Core-Fonts-EULA",
+   "acquisition": {
+    "method": "cabextract",
+    "cabinet_url": "https://downloads.sourceforge.net/corefonts/times32.exe",
+    "cabinet_sha256": "db56595ec6ef5d3de5c24994f001f03b2a13e37cee27bc25c58f6f43e8f807ab",
+    "cabinet_size_bytes": 661728,
+    "member_path": "Timesi.TTF"
+   },
+   "license_note": "Microsoft Core Fonts for the Web EULA (Licen.TXT inside each installer). Never committed."
+  },
+  {
+   "name": "corefonts-timesbi.ttf",
+   "sha256": "192e1b0d18e90334e999a99f8c32808d6a2e74b3698b8cd90c943c2249a46549",
+   "size_bytes": 238612,
+   "spdx": "LicenseRef-Microsoft-Core-Fonts-EULA",
+   "acquisition": {
+    "method": "cabextract",
+    "cabinet_url": "https://downloads.sourceforge.net/corefonts/times32.exe",
+    "cabinet_sha256": "db56595ec6ef5d3de5c24994f001f03b2a13e37cee27bc25c58f6f43e8f807ab",
+    "cabinet_size_bytes": 661728,
+    "member_path": "Timesbi.TTF"
+   },
+   "license_note": "Microsoft Core Fonts for the Web EULA (Licen.TXT inside each installer). Never committed."
+  },
+  {
+   "name": "corefonts-trebuc.ttf",
+   "sha256": "ec3ffb302488251e1b67fb09dd578b364c5339e27c1cfb26eb627666236453d0",
+   "size_bytes": 126796,
+   "spdx": "LicenseRef-Microsoft-Core-Fonts-EULA",
+   "acquisition": {
+    "method": "cabextract",
+    "cabinet_url": "https://downloads.sourceforge.net/corefonts/trebuc32.exe",
+    "cabinet_sha256": "5a690d9bb8510be1b8b4fe49f1f2319651fe51bbe54775ddddd8ef0bd07fdac9",
+    "cabinet_size_bytes": 357200,
+    "member_path": "trebuc.ttf"
+   },
+   "license_note": "Microsoft Core Fonts for the Web EULA (Licen.TXT inside each installer). Never committed."
+  },
+  {
+   "name": "corefonts-trebucbd.ttf",
+   "sha256": "f65941f9487c0a0a3b7445996ecbbd24466d7ae76ea2a597ced55f438fa63838",
+   "size_bytes": 123828,
+   "spdx": "LicenseRef-Microsoft-Core-Fonts-EULA",
+   "acquisition": {
+    "method": "cabextract",
+    "cabinet_url": "https://downloads.sourceforge.net/corefonts/trebuc32.exe",
+    "cabinet_sha256": "5a690d9bb8510be1b8b4fe49f1f2319651fe51bbe54775ddddd8ef0bd07fdac9",
+    "cabinet_size_bytes": 357200,
+    "member_path": "Trebucbd.ttf"
+   },
+   "license_note": "Microsoft Core Fonts for the Web EULA (Licen.TXT inside each installer). Never committed."
+  },
+  {
+   "name": "corefonts-trebucit.ttf",
+   "sha256": "db56fdac7d3ba20b7aededcb6ee86c46687489d17b759e1708ea4e2d21e38410",
+   "size_bytes": 139288,
+   "spdx": "LicenseRef-Microsoft-Core-Fonts-EULA",
+   "acquisition": {
+    "method": "cabextract",
+    "cabinet_url": "https://downloads.sourceforge.net/corefonts/trebuc32.exe",
+    "cabinet_sha256": "5a690d9bb8510be1b8b4fe49f1f2319651fe51bbe54775ddddd8ef0bd07fdac9",
+    "cabinet_size_bytes": 357200,
+    "member_path": "trebucit.ttf"
+   },
+   "license_note": "Microsoft Core Fonts for the Web EULA (Licen.TXT inside each installer). Never committed."
+  },
+  {
+   "name": "corefonts-trebucbi.ttf",
+   "sha256": "c0a6bdf31f9f2953b2f08a0c1734c892bc825f0fb17c604d420f7acf203a213b",
+   "size_bytes": 131188,
+   "spdx": "LicenseRef-Microsoft-Core-Fonts-EULA",
+   "acquisition": {
+    "method": "cabextract",
+    "cabinet_url": "https://downloads.sourceforge.net/corefonts/trebuc32.exe",
+    "cabinet_sha256": "5a690d9bb8510be1b8b4fe49f1f2319651fe51bbe54775ddddd8ef0bd07fdac9",
+    "cabinet_size_bytes": 357200,
+    "member_path": "trebucbi.ttf"
+   },
+   "license_note": "Microsoft Core Fonts for the Web EULA (Licen.TXT inside each installer). Never committed."
+  },
+  {
+   "name": "corefonts-verdana.ttf",
+   "sha256": "96ed14949ca4b7392cff235b9c41d55c125382abbe0c0d3c2b9dd66897cae0cb",
+   "size_bytes": 139640,
+   "spdx": "LicenseRef-Microsoft-Core-Fonts-EULA",
+   "acquisition": {
+    "method": "cabextract",
+    "cabinet_url": "https://downloads.sourceforge.net/corefonts/verdan32.exe",
+    "cabinet_sha256": "c1cb61255e363166794e47664e2f21af8e3a26cb6346eb8d2ae2fa85dd5aad96",
+    "cabinet_size_bytes": 351992,
+    "member_path": "Verdana.TTF"
+   },
+   "license_note": "Microsoft Core Fonts for the Web EULA (Licen.TXT inside each installer). Never committed."
+  },
+  {
+   "name": "corefonts-verdanab.ttf",
+   "sha256": "c8f5065ba91680f596af3b0378e2c3e713b95a523be3d56ae185ca2b8f5f0b23",
+   "size_bytes": 136032,
+   "spdx": "LicenseRef-Microsoft-Core-Fonts-EULA",
+   "acquisition": {
+    "method": "cabextract",
+    "cabinet_url": "https://downloads.sourceforge.net/corefonts/verdan32.exe",
+    "cabinet_sha256": "c1cb61255e363166794e47664e2f21af8e3a26cb6346eb8d2ae2fa85dd5aad96",
+    "cabinet_size_bytes": 351992,
+    "member_path": "Verdanab.TTF"
+   },
+   "license_note": "Microsoft Core Fonts for the Web EULA (Licen.TXT inside each installer). Never committed."
+  },
+  {
+   "name": "corefonts-verdanai.ttf",
+   "sha256": "91b59186656f52972531a11433c866fd56e62ec4e61e2621a2dba70c8f19a828",
+   "size_bytes": 154264,
+   "spdx": "LicenseRef-Microsoft-Core-Fonts-EULA",
+   "acquisition": {
+    "method": "cabextract",
+    "cabinet_url": "https://downloads.sourceforge.net/corefonts/verdan32.exe",
+    "cabinet_sha256": "c1cb61255e363166794e47664e2f21af8e3a26cb6346eb8d2ae2fa85dd5aad96",
+    "cabinet_size_bytes": 351992,
+    "member_path": "Verdanai.TTF"
+   },
+   "license_note": "Microsoft Core Fonts for the Web EULA (Licen.TXT inside each installer). Never committed."
+  },
+  {
+   "name": "corefonts-verdanaz.ttf",
+   "sha256": "698e220f48f4a40e77af7eb34958c8fd02f1e18c3ba3f365d93bfa2ed4474c80",
+   "size_bytes": 153324,
+   "spdx": "LicenseRef-Microsoft-Core-Fonts-EULA",
+   "acquisition": {
+    "method": "cabextract",
+    "cabinet_url": "https://downloads.sourceforge.net/corefonts/verdan32.exe",
+    "cabinet_sha256": "c1cb61255e363166794e47664e2f21af8e3a26cb6346eb8d2ae2fa85dd5aad96",
+    "cabinet_size_bytes": 351992,
+    "member_path": "Verdanaz.TTF"
+   },
+   "license_note": "Microsoft Core Fonts for the Web EULA (Licen.TXT inside each installer). Never committed."
+  },
+  {
+   "name": "corefonts-webdings.ttf",
+   "sha256": "10d099c88521b1b9e380b7690cbe47b54bb19396ca515358cfdc15ac249e2f5d",
+   "size_bytes": 118752,
+   "spdx": "LicenseRef-Microsoft-Core-Fonts-EULA",
+   "acquisition": {
+    "method": "cabextract",
+    "cabinet_url": "https://downloads.sourceforge.net/corefonts/webdin32.exe",
+    "cabinet_sha256": "64595b5abc1080fba8610c5c34fab5863408e806aafe84653ca8575bed17d75a",
+    "cabinet_size_bytes": 185072,
+    "member_path": "Webdings.TTF"
+   },
+   "license_note": "Microsoft Core Fonts for the Web EULA (Licen.TXT inside each installer). Never committed."
+  },
+  {
+   "name": "Wingdings2-Geometric.ttf",
+   "sha256": "74db0932762a2c31787db2643736cf31671a047ac96dd6cdac390f68839272e9",
+   "size_bytes": 2688,
+   "spdx": "CC0-1.0",
+   "license_file": "fonts/licenses/Wingdings2-Geometric-CC0-1.0.txt",
+   "acquisition": {
+    "method": "generated",
+    "script": "fonts/build_wingdings2_geometric.py",
+    "script_sha256": "5d37da16feca2b36b66e1a21753c575a3872a347333d18dc4c4926ffabad1f37",
+    "requires": "fontTools 4.66.1",
+    "note": "Family \"Wingdings 2\": filled circles F095-F098 and filled squares F09F-F0A2 computed from each slot's advance and bounding box. Not Microsoft's font; no outlines copied."
+   }
+  }
+ ]
+}

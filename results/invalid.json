@@ -1,10 +1,12 @@
 {
  "schema": "public-benchmark-invalid-v1",
  "policy": "Shown in every report and never scored; excluded from counts and means.",
- "positions": [
+ "release": "1.1.0",
+ "positions": [],
+ "history": [
   {
+   "release": "1.0.0",
    "deck": "pptarena-013",
-   "deck_sha256": "228745f5e0604d89681f553f917506bb5204659adeb7d2bf7685240ae30936e4",
    "slides": [
     12,
     18,
@@ -15,8 +17,8 @@
     27,
     30
    ],
-   "reason": "required glyphs absent from the frozen font set",
-   "detail": "Wingdings 2 bullet U+F096 has no freely licensed font in the frozen set; the LibreOffice PDF font proof cannot be satisfied."
+   "reason": "Wingdings 2 bullet U+F096 had no freely licensed font in the 194-font set; the LibreOffice PDF font proof could not pass.",
+   "resolved_in": "1.1.0: the 195-font profile adds the generated CC0 \"Wingdings 2\" geometric bullets (fonts/build_wingdings2_geometric.py); all eight slides now prove and are scored."
   }
  ]
 }
