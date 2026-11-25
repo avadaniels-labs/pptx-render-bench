@@ -1,0 +1,12 @@
+{
+ "schema": "public-benchmark-exceptions-v1",
+ "policy": "Scored and reported as a loss; accepted by the maintainer, not excluded.",
+ "positions": [
+  {
+   "deck": "pptarena-080",
+   "slide": 7,
+   "status": "loss",
+   "reason": "mc:AlternateContent equation. PowerPoint renders the a14 OMML branch live with Cambria Math, whose glyph ink grows the line height; LibreOffice and the Rust renderer draw the stored fallback picture. No freely licensed font reproduces Cambria Math metrics."
+  }
+ ]
+}

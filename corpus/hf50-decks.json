@@ -1,0 +1,392 @@
+{
+ "schema": "public-benchmark-corpus-v1",
+ "dataset": "noxneural/pptx_collection_templates",
+ "huggingface_revision": "748f5b047e87c2bd6fdb0a898a68134453f15541",
+ "note": "48 published rows, 45 distinct files (895 slides). Rows sharing a sha256 are the same deck and are scored once.",
+ "decks": [
+  {
+   "id": "hf50-e6822c6213e8",
+   "published_index": 1,
+   "hf_path": "Biology Subject for Elementary_ Tropical Rainforest Wildlife Pink and Green Color Blocks Presentation(1).pptx",
+   "download_url": "https://huggingface.co/datasets/noxneural/pptx_collection_templates/resolve/748f5b047e87c2bd6fdb0a898a68134453f15541/Biology%20Subject%20for%20Elementary_%20Tropical%20Rainforest%20Wildlife%20Pink%20and%20Green%20Color%20Blocks%20Presentation%281%29.pptx",
+   "sha256": "e6822c6213e81b8ae24cd3b084a2d135da87327fa02627d0d45ff8013ebf91e1",
+   "slide_count": 20
+  },
+  {
+   "id": "hf50-5d1ef5be98f3",
+   "published_index": 2,
+   "hf_path": "Self Introduction for High School Students(1).pptx",
+   "download_url": "https://huggingface.co/datasets/noxneural/pptx_collection_templates/resolve/748f5b047e87c2bd6fdb0a898a68134453f15541/Self%20Introduction%20for%20High%20School%20Students%281%29.pptx",
+   "sha256": "5d1ef5be98f3da1d1b1e7cc6c708884e654f24d6be8d580cdd1bb7c1b71c6596",
+   "slide_count": 19
+  },
+  {
+   "id": "hf50-364717b724ce",
+   "published_index": 3,
+   "hf_path": "Fun Illustrative Happy Indian Independence Day!.pptx",
+   "download_url": "https://huggingface.co/datasets/noxneural/pptx_collection_templates/resolve/748f5b047e87c2bd6fdb0a898a68134453f15541/Fun%20Illustrative%20Happy%20Indian%20Independence%20Day%21.pptx",
+   "sha256": "364717b724ce907becb6aedc59ae8fab688a9df066b7e01a8cb2af523dfc96c5",
+   "slide_count": 20
+  },
+  {
+   "id": "hf50-ac10b65cefd8",
+   "published_index": 4,
+   "hf_path": "Adrian \u00b7 SlidesCarnival.pptx",
+   "download_url": "https://huggingface.co/datasets/noxneural/pptx_collection_templates/resolve/748f5b047e87c2bd6fdb0a898a68134453f15541/Adrian%20%C2%B7%20SlidesCarnival.pptx",
+   "sha256": "ac10b65cefd85a023913fafd68d4f8db62545e2e9acb4706ca40a1338470c47c",
+   "slide_count": 39
+  },
+  {
+   "id": "hf50-566537650cdb",
+   "published_index": 5,
+   "hf_path": "Black Purple and Green Geometric Corporate Resume Creative Presentation \u00b7 SlidesCarnival.pptx",
+   "download_url": "https://huggingface.co/datasets/noxneural/pptx_collection_templates/resolve/748f5b047e87c2bd6fdb0a898a68134453f15541/Black%20Purple%20and%20Green%20Geometric%20Corporate%20Resume%20Creative%20Presentation%20%C2%B7%20SlidesCarnival.pptx",
+   "sha256": "566537650cdb6e2f0b11530e2f5ad49eee4ec14f59f48a3e5208500ce214ea8f",
+   "slide_count": 28
+  },
+  {
+   "id": "hf50-63f4df2c2f87",
+   "published_index": 6,
+   "hf_path": "Illustrated Pattern April Daily Calendar 2024 Presentation(1).pptx",
+   "download_url": "https://huggingface.co/datasets/noxneural/pptx_collection_templates/resolve/748f5b047e87c2bd6fdb0a898a68134453f15541/Illustrated%20Pattern%20April%20Daily%20Calendar%202024%20Presentation%281%29.pptx",
+   "sha256": "63f4df2c2f873a6b81c78bdd4b330f27cef7a4fdbb31521c5989829b39369265",
+   "slide_count": 19
+  },
+  {
+   "id": "hf50-be566489bf4c",
+   "published_index": 7,
+   "hf_path": "Real Estate Agent CV Resume.pptx",
+   "download_url": "https://huggingface.co/datasets/noxneural/pptx_collection_templates/resolve/748f5b047e87c2bd6fdb0a898a68134453f15541/Real%20Estate%20Agent%20CV%20Resume.pptx",
+   "sha256": "be566489bf4ceb7e17d06ace9bfc561becc165814fd0e94da22e9bbc3020b686",
+   "slide_count": 4
+  },
+  {
+   "id": "hf50-63f4df2c2f87",
+   "published_index": 8,
+   "hf_path": "Illustrated Pattern April Daily Calendar 2024 Presentation.pptx",
+   "download_url": "https://huggingface.co/datasets/noxneural/pptx_collection_templates/resolve/748f5b047e87c2bd6fdb0a898a68134453f15541/Illustrated%20Pattern%20April%20Daily%20Calendar%202024%20Presentation.pptx",
+   "sha256": "63f4df2c2f873a6b81c78bdd4b330f27cef7a4fdbb31521c5989829b39369265",
+   "slide_count": 19
+  },
+  {
+   "id": "hf50-5db188682afa",
+   "published_index": 9,
+   "hf_path": "Isabella \u00b7 SlidesCarnival.pptx",
+   "download_url": "https://huggingface.co/datasets/noxneural/pptx_collection_templates/resolve/748f5b047e87c2bd6fdb0a898a68134453f15541/Isabella%20%C2%B7%20SlidesCarnival.pptx",
+   "sha256": "5db188682afa4cb0047880807590df61dab414b65b5cc3aec66bb987f61e3851",
+   "slide_count": 39
+  },
+  {
+   "id": "hf50-9cc903c1794b",
+   "published_index": 10,
+   "hf_path": "Boho Autumn Leaves Personal Organizer.pptx",
+   "download_url": "https://huggingface.co/datasets/noxneural/pptx_collection_templates/resolve/748f5b047e87c2bd6fdb0a898a68134453f15541/Boho%20Autumn%20Leaves%20Personal%20Organizer.pptx",
+   "sha256": "9cc903c1794b308dd25d0aeb5418dec204156c881c24861e56475a090bf52ed2",
+   "slide_count": 18
+  },
+  {
+   "id": "hf50-1b0649557e41",
+   "published_index": 11,
+   "hf_path": "Colorful Cute Simple Illustrative Doodles Funny About Me Creative Presentation \u00b7 SlidesCarnival.pptx",
+   "download_url": "https://huggingface.co/datasets/noxneural/pptx_collection_templates/resolve/748f5b047e87c2bd6fdb0a898a68134453f15541/Colorful%20Cute%20Simple%20Illustrative%20Doodles%20Funny%20About%20Me%20Creative%20Presentation%20%C2%B7%20SlidesCarnival.pptx",
+   "sha256": "1b0649557e41e7be2965b1464b107b680cc4a9e8e1ec0d80d5b9aba0d618ba54",
+   "slide_count": 28
+  },
+  {
+   "id": "hf50-cc9f9ef96a85",
+   "published_index": 12,
+   "hf_path": "Ethics of Artificial Intelligence.pptx",
+   "download_url": "https://huggingface.co/datasets/noxneural/pptx_collection_templates/resolve/748f5b047e87c2bd6fdb0a898a68134453f15541/Ethics%20of%20Artificial%20Intelligence.pptx",
+   "sha256": "cc9f9ef96a856c50d6939a6690a695b904d32bf41dd0f3808b2506b6ea1375be",
+   "slide_count": 20
+  },
+  {
+   "id": "hf50-254f865c0dd9",
+   "published_index": 13,
+   "hf_path": "Family Feud Answer Board Background(1).pptx",
+   "download_url": "https://huggingface.co/datasets/noxneural/pptx_collection_templates/resolve/748f5b047e87c2bd6fdb0a898a68134453f15541/Family%20Feud%20Answer%20Board%20Background%281%29.pptx",
+   "sha256": "254f865c0dd93499645d0f0c2b54dac4b32a9e655bac21a2273e60de1e545586",
+   "slide_count": 4
+  },
+  {
+   "id": "hf50-41a3986b349f",
+   "published_index": 14,
+   "hf_path": "Classroom Seating Chart .pptx",
+   "download_url": "https://huggingface.co/datasets/noxneural/pptx_collection_templates/resolve/748f5b047e87c2bd6fdb0a898a68134453f15541/Classroom%20Seating%20Chart%20.pptx",
+   "sha256": "41a3986b349fe694796a8c9500fbd530ea7f788e33f893140bb8e5ecf5e63624",
+   "slide_count": 3
+  },
+  {
+   "id": "hf50-4f0ceeed9ad1",
+   "published_index": 15,
+   "hf_path": "Futuristic Engineering Center Modern Presentation(2).pptx",
+   "download_url": "https://huggingface.co/datasets/noxneural/pptx_collection_templates/resolve/748f5b047e87c2bd6fdb0a898a68134453f15541/Futuristic%20Engineering%20Center%20Modern%20Presentation%282%29.pptx",
+   "sha256": "4f0ceeed9ad1ef10850277516921a21dc6f358d5574a5e286893c3f5ba0a510d",
+   "slide_count": 18
+  },
+  {
+   "id": "hf50-a196a3aa8fe9",
+   "published_index": 17,
+   "hf_path": "Blue Red and Yellow Cute Simple Illustrative Doodles Pretty Social Media Creative Presentation \u00b7 SlidesCarnival.pptx",
+   "download_url": "https://huggingface.co/datasets/noxneural/pptx_collection_templates/resolve/748f5b047e87c2bd6fdb0a898a68134453f15541/Blue%20Red%20and%20Yellow%20Cute%20Simple%20Illustrative%20Doodles%20Pretty%20Social%20Media%20Creative%20Presentation%20%C2%B7%20SlidesCarnival.pptx",
+   "sha256": "a196a3aa8fe9313eca69001f89d12373b91d603757f7f3b22f884f896df896f2",
+   "slide_count": 28
+  },
+  {
+   "id": "hf50-f3de8e18c1fc",
+   "published_index": 18,
+   "hf_path": "Fall October Marketing Calendar(1).pptx",
+   "download_url": "https://huggingface.co/datasets/noxneural/pptx_collection_templates/resolve/748f5b047e87c2bd6fdb0a898a68134453f15541/Fall%20October%20Marketing%20Calendar%281%29.pptx",
+   "sha256": "f3de8e18c1fcfdaed75240ada6979d1418b4719b793003945e1fcca2892b79ac",
+   "slide_count": 22
+  },
+  {
+   "id": "hf50-efc4c933a213",
+   "published_index": 19,
+   "hf_path": "Pre-K Outdoor Activities to Celebrate National Play Outside Day Presentation.pptx",
+   "download_url": "https://huggingface.co/datasets/noxneural/pptx_collection_templates/resolve/748f5b047e87c2bd6fdb0a898a68134453f15541/Pre-K%20Outdoor%20Activities%20to%20Celebrate%20National%20Play%20Outside%20Day%20Presentation.pptx",
+   "sha256": "efc4c933a213cff02bb2361e06b7f38a3aa595020220a8ec52e632cba6e4b850",
+   "slide_count": 20
+  },
+  {
+   "id": "hf50-79e102b5fdb1",
+   "published_index": 20,
+   "hf_path": "Canadian Thanksgiving Day Background Slides.pptx",
+   "download_url": "https://huggingface.co/datasets/noxneural/pptx_collection_templates/resolve/748f5b047e87c2bd6fdb0a898a68134453f15541/Canadian%20Thanksgiving%20Day%20Background%20Slides.pptx",
+   "sha256": "79e102b5fdb128743cf172e9c26489251a6f8e075ad205c4dc66507cad731d07",
+   "slide_count": 18
+  },
+  {
+   "id": "hf50-5076299de79a",
+   "published_index": 21,
+   "hf_path": "Eleanor \u00b7 SlidesCarnival(2).pptx",
+   "download_url": "https://huggingface.co/datasets/noxneural/pptx_collection_templates/resolve/748f5b047e87c2bd6fdb0a898a68134453f15541/Eleanor%20%C2%B7%20SlidesCarnival%282%29.pptx",
+   "sha256": "5076299de79a0c8ede47bb2f3c286a8e021ef0f7a55c991279ad03d4717ca334",
+   "slide_count": 39
+  },
+  {
+   "id": "hf50-8abffe730c8c",
+   "published_index": 23,
+   "hf_path": "Red, Blue and Yellow Cute Doodle Science Subject for Elementary School Magnetism Presentation.pptx",
+   "download_url": "https://huggingface.co/datasets/noxneural/pptx_collection_templates/resolve/748f5b047e87c2bd6fdb0a898a68134453f15541/Red%2C%20Blue%20and%20Yellow%20Cute%20Doodle%20Science%20Subject%20for%20Elementary%20School%20Magnetism%20Presentation.pptx",
+   "sha256": "8abffe730c8c0871c72a087710fe987472aa2f26f4acb27d40503af0421fa279",
+   "slide_count": 26
+  },
+  {
+   "id": "hf50-6261eacc5caf",
+   "published_index": 24,
+   "hf_path": "Agribusiness Newsletter Modern Minimal Presentation.pptx",
+   "download_url": "https://huggingface.co/datasets/noxneural/pptx_collection_templates/resolve/748f5b047e87c2bd6fdb0a898a68134453f15541/Agribusiness%20Newsletter%20Modern%20Minimal%20Presentation.pptx",
+   "sha256": "6261eacc5caf66cd343de8d8d290e94a8c8fef4408a1fbc8e7e8f41f26e0bde0",
+   "slide_count": 18
+  },
+  {
+   "id": "hf50-05d643fef56e",
+   "published_index": 25,
+   "hf_path": "Christmas Giveaway Poster.pptx",
+   "download_url": "https://huggingface.co/datasets/noxneural/pptx_collection_templates/resolve/748f5b047e87c2bd6fdb0a898a68134453f15541/Christmas%20Giveaway%20Poster.pptx",
+   "sha256": "05d643fef56e9ca4a889914195af07bea4f9538a6769a686a49570d5b7e374b0",
+   "slide_count": 4
+  },
+  {
+   "id": "hf50-49c8429020dd",
+   "published_index": 26,
+   "hf_path": "Impacted Wisdom Teeth Slides.pptx",
+   "download_url": "https://huggingface.co/datasets/noxneural/pptx_collection_templates/resolve/748f5b047e87c2bd6fdb0a898a68134453f15541/Impacted%20Wisdom%20Teeth%20Slides.pptx",
+   "sha256": "49c8429020ddf4111230b21369df4bf1bc7ef96d0651cad9b99702aa6b433936",
+   "slide_count": 15
+  },
+  {
+   "id": "hf50-c5fe391d6ae8",
+   "published_index": 27,
+   "hf_path": "Simple Minimal Formal Research Poster(1).pptx",
+   "download_url": "https://huggingface.co/datasets/noxneural/pptx_collection_templates/resolve/748f5b047e87c2bd6fdb0a898a68134453f15541/Simple%20Minimal%20Formal%20Research%20Poster%281%29.pptx",
+   "sha256": "c5fe391d6ae89f4dbff65d8179257501218b27986c76f8a1433f0d031543bcdc",
+   "slide_count": 4
+  },
+  {
+   "id": "hf50-75b392fb245e",
+   "published_index": 28,
+   "hf_path": "Dentist Career Day Presentation.pptx",
+   "download_url": "https://huggingface.co/datasets/noxneural/pptx_collection_templates/resolve/748f5b047e87c2bd6fdb0a898a68134453f15541/Dentist%20Career%20Day%20Presentation.pptx",
+   "sha256": "75b392fb245eaea401a08a0f621ec5b21f60f6721b84c60e6c75274f4bd71484",
+   "slide_count": 20
+  },
+  {
+   "id": "hf50-535733a7b2dc",
+   "published_index": 29,
+   "hf_path": "Cute Scrapbook Baby Milestones Photo Album.pptx",
+   "download_url": "https://huggingface.co/datasets/noxneural/pptx_collection_templates/resolve/748f5b047e87c2bd6fdb0a898a68134453f15541/Cute%20Scrapbook%20Baby%20Milestones%20Photo%20Album.pptx",
+   "sha256": "535733a7b2dcb35448bee3b641ae65524f4bd1baf73a269517d853adfd7345f2",
+   "slide_count": 10
+  },
+  {
+   "id": "hf50-7331d7ae8478",
+   "published_index": 30,
+   "hf_path": "Volunteer Onboarding Presentation.pptx",
+   "download_url": "https://huggingface.co/datasets/noxneural/pptx_collection_templates/resolve/748f5b047e87c2bd6fdb0a898a68134453f15541/Volunteer%20Onboarding%20Presentation.pptx",
+   "sha256": "7331d7ae84786ce70dafe6d3322d29344d59ca3f3745057207b274344d765769",
+   "slide_count": 20
+  },
+  {
+   "id": "hf50-0e2ac75f436a",
+   "published_index": 31,
+   "hf_path": "Green and Beige Retail Startup Pitch Deck.pptx",
+   "download_url": "https://huggingface.co/datasets/noxneural/pptx_collection_templates/resolve/748f5b047e87c2bd6fdb0a898a68134453f15541/Green%20and%20Beige%20Retail%20Startup%20Pitch%20Deck.pptx",
+   "sha256": "0e2ac75f436a96e0e04529569ce872896e7b4d9b22bcd1122b341d536f6f8c38",
+   "slide_count": 33
+  },
+  {
+   "id": "hf50-e5d043d74d51",
+   "published_index": 32,
+   "hf_path": "Colorful Geometric Company Founder About Me Creative Presentation \u00b7 SlidesCarnival.pptx",
+   "download_url": "https://huggingface.co/datasets/noxneural/pptx_collection_templates/resolve/748f5b047e87c2bd6fdb0a898a68134453f15541/Colorful%20Geometric%20Company%20Founder%20About%20Me%20Creative%20Presentation%20%C2%B7%20SlidesCarnival.pptx",
+   "sha256": "e5d043d74d51553c4db2f9e6c43839e3b6956262337526f2f3e0858ddb47736c",
+   "slide_count": 28
+  },
+  {
+   "id": "hf50-4e316028cfba",
+   "published_index": 33,
+   "hf_path": "Modern Abstract Trip Planning Infographic.pptx",
+   "download_url": "https://huggingface.co/datasets/noxneural/pptx_collection_templates/resolve/748f5b047e87c2bd6fdb0a898a68134453f15541/Modern%20Abstract%20Trip%20Planning%20Infographic.pptx",
+   "sha256": "4e316028cfba10038dba51086944152f5ef86a4f55ea4b7a431ffdd6af6aab7b",
+   "slide_count": 21
+  },
+  {
+   "id": "hf50-20b14ed9f9bc",
+   "published_index": 34,
+   "hf_path": "Back to School Open to Registration Poster.pptx",
+   "download_url": "https://huggingface.co/datasets/noxneural/pptx_collection_templates/resolve/748f5b047e87c2bd6fdb0a898a68134453f15541/Back%20to%20School%20Open%20to%20Registration%20Poster.pptx",
+   "sha256": "20b14ed9f9bc08c191f12ca37d2fc57b38e9d43d7b96c3440f605448761758f7",
+   "slide_count": 4
+  },
+  {
+   "id": "hf50-3624e08f385b",
+   "published_index": 35,
+   "hf_path": "Retro Y2K SEO Specialist Resume Presentation.ppt(1).pptx",
+   "download_url": "https://huggingface.co/datasets/noxneural/pptx_collection_templates/resolve/748f5b047e87c2bd6fdb0a898a68134453f15541/Retro%20Y2K%20SEO%20Specialist%20Resume%20Presentation.ppt%281%29.pptx",
+   "sha256": "3624e08f385b229d55dbda0cc520c8fd40e404aefcae7511adb1b9ae1a7f38d0",
+   "slide_count": 20
+  },
+  {
+   "id": "hf50-86ab911175d5",
+   "published_index": 36,
+   "hf_path": "Colourful Playful Infographic Presentation(1).pptx",
+   "download_url": "https://huggingface.co/datasets/noxneural/pptx_collection_templates/resolve/748f5b047e87c2bd6fdb0a898a68134453f15541/Colourful%20Playful%20Infographic%20Presentation%281%29.pptx",
+   "sha256": "86ab911175d5a1d383716282c5483c3933d13284f700f727675bdce53ec2fb82",
+   "slide_count": 22
+  },
+  {
+   "id": "hf50-86ab911175d5",
+   "published_index": 37,
+   "hf_path": "Colourful Playful Infographic Presentation.pptx",
+   "download_url": "https://huggingface.co/datasets/noxneural/pptx_collection_templates/resolve/748f5b047e87c2bd6fdb0a898a68134453f15541/Colourful%20Playful%20Infographic%20Presentation.pptx",
+   "sha256": "86ab911175d5a1d383716282c5483c3933d13284f700f727675bdce53ec2fb82",
+   "slide_count": 22
+  },
+  {
+   "id": "hf50-52469cbc5788",
+   "published_index": 38,
+   "hf_path": "Elegant New Year's Eve MiniTheme Presentation(3).pptx",
+   "download_url": "https://huggingface.co/datasets/noxneural/pptx_collection_templates/resolve/748f5b047e87c2bd6fdb0a898a68134453f15541/Elegant%20New%20Year%27s%20Eve%20MiniTheme%20Presentation%283%29.pptx",
+   "sha256": "52469cbc5788d6474ba58cc3ab53111d5509d93db42557151fb16a842ec61f07",
+   "slide_count": 20
+  },
+  {
+   "id": "hf50-f37e5de26cfd",
+   "published_index": 39,
+   "hf_path": "Cupid God of Love Storybook.pptx",
+   "download_url": "https://huggingface.co/datasets/noxneural/pptx_collection_templates/resolve/748f5b047e87c2bd6fdb0a898a68134453f15541/Cupid%20God%20of%20Love%20Storybook.pptx",
+   "sha256": "f37e5de26cfd21576d5d95205044410f49e58e9c1f57433f8546fefcb1909005",
+   "slide_count": 12
+  },
+  {
+   "id": "hf50-4eb789133820",
+   "published_index": 40,
+   "hf_path": "Illustrated Landscape Marketing Christmas Background(1).pptx",
+   "download_url": "https://huggingface.co/datasets/noxneural/pptx_collection_templates/resolve/748f5b047e87c2bd6fdb0a898a68134453f15541/Illustrated%20Landscape%20Marketing%20Christmas%20Background%281%29.pptx",
+   "sha256": "4eb789133820bccfa86d7cfb2562ee08b513a80a83665dc202539e65eb925874",
+   "slide_count": 24
+  },
+  {
+   "id": "hf50-3c1f404293c3",
+   "published_index": 41,
+   "hf_path": "January Calendar Planner.pptx",
+   "download_url": "https://huggingface.co/datasets/noxneural/pptx_collection_templates/resolve/748f5b047e87c2bd6fdb0a898a68134453f15541/January%20Calendar%20Planner.pptx",
+   "sha256": "3c1f404293c3a533f359f9fd15df71e51bb7e5d90fc4c719d1b115fb92074de1",
+   "slide_count": 5
+  },
+  {
+   "id": "hf50-254f865c0dd9",
+   "published_index": 42,
+   "hf_path": "Family Feud Answer Board Background.pptx",
+   "download_url": "https://huggingface.co/datasets/noxneural/pptx_collection_templates/resolve/748f5b047e87c2bd6fdb0a898a68134453f15541/Family%20Feud%20Answer%20Board%20Background.pptx",
+   "sha256": "254f865c0dd93499645d0f0c2b54dac4b32a9e655bac21a2273e60de1e545586",
+   "slide_count": 4
+  },
+  {
+   "id": "hf50-175e2ababe96",
+   "published_index": 43,
+   "hf_path": "Simple Illustrative Science Lesson for Elementary_ Ozone Layer.pptx",
+   "download_url": "https://huggingface.co/datasets/noxneural/pptx_collection_templates/resolve/748f5b047e87c2bd6fdb0a898a68134453f15541/Simple%20Illustrative%20Science%20Lesson%20for%20Elementary_%20Ozone%20Layer.pptx",
+   "sha256": "175e2ababe96ad18ba9edb174e1177ce42cc0e43e961d8054a43ae76d373c555",
+   "slide_count": 20
+  },
+  {
+   "id": "hf50-e63eca1be683",
+   "published_index": 44,
+   "hf_path": "Feeble \u00b7 SlidesCarnival(2).pptx",
+   "download_url": "https://huggingface.co/datasets/noxneural/pptx_collection_templates/resolve/748f5b047e87c2bd6fdb0a898a68134453f15541/Feeble%20%C2%B7%20SlidesCarnival%282%29.pptx",
+   "sha256": "e63eca1be683406d33652aa59b8b0ee2b3dcd08fed6a10d5354522a282896c3f",
+   "slide_count": 39
+  },
+  {
+   "id": "hf50-d5643d9332a2",
+   "published_index": 45,
+   "hf_path": "Volumes of Composite Solids Lesson for High School.pptx",
+   "download_url": "https://huggingface.co/datasets/noxneural/pptx_collection_templates/resolve/748f5b047e87c2bd6fdb0a898a68134453f15541/Volumes%20of%20Composite%20Solids%20Lesson%20for%20High%20School.pptx",
+   "sha256": "d5643d9332a2b9e32b67dba826b2299179ae6bd32e24c79d21da4cd6c7b74212",
+   "slide_count": 13
+  },
+  {
+   "id": "hf50-4e9269de9dab",
+   "published_index": 46,
+   "hf_path": "Soft Green and Beige Simple Doodles Product Timeline Presentation.pptx",
+   "download_url": "https://huggingface.co/datasets/noxneural/pptx_collection_templates/resolve/748f5b047e87c2bd6fdb0a898a68134453f15541/Soft%20Green%20and%20Beige%20Simple%20Doodles%20Product%20Timeline%20Presentation.pptx",
+   "sha256": "4e9269de9daba54125966d4e9a5a9f0b1ff545352d967054bd8d82e013a6b6b3",
+   "slide_count": 31
+  },
+  {
+   "id": "hf50-a89293ae2384",
+   "published_index": 47,
+   "hf_path": "Salisbury \u00b7 SlidesCarnival.pptx",
+   "download_url": "https://huggingface.co/datasets/noxneural/pptx_collection_templates/resolve/748f5b047e87c2bd6fdb0a898a68134453f15541/Salisbury%20%C2%B7%20SlidesCarnival.pptx",
+   "sha256": "a89293ae2384abb3873dcd5d0e2acd8508726d783cad3af547cb5ba52bfdad82",
+   "slide_count": 39
+  },
+  {
+   "id": "hf50-115278eeabe5",
+   "published_index": 48,
+   "hf_path": "Roadmap Infographics.pptx",
+   "download_url": "https://huggingface.co/datasets/noxneural/pptx_collection_templates/resolve/748f5b047e87c2bd6fdb0a898a68134453f15541/Roadmap%20Infographics.pptx",
+   "sha256": "115278eeabe594afceb997ba43b24f00024dddf80c6d9ac5a64e4b681b95c48f",
+   "slide_count": 15
+  },
+  {
+   "id": "hf50-c511c707d99c",
+   "published_index": 49,
+   "hf_path": "Cruise Ship Line Company Profile.pptx",
+   "download_url": "https://huggingface.co/datasets/noxneural/pptx_collection_templates/resolve/748f5b047e87c2bd6fdb0a898a68134453f15541/Cruise%20Ship%20Line%20Company%20Profile.pptx",
+   "sha256": "c511c707d99c4618e1802aabb0e0526fbed75a5fc31770738590a59df78efdbd",
+   "slide_count": 21
+  },
+  {
+   "id": "hf50-2a8549240cb1",
+   "published_index": 50,
+   "hf_path": "June Calendar Planner.pptx",
+   "download_url": "https://huggingface.co/datasets/noxneural/pptx_collection_templates/resolve/748f5b047e87c2bd6fdb0a898a68134453f15541/June%20Calendar%20Planner.pptx",
+   "sha256": "2a8549240cb1ab25b0c011841ae747ba712b9cc6d5afcf4b7decf6bd84706fdc",
+   "slide_count": 5
+  }
+ ]
+}

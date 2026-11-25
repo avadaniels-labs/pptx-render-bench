@@ -1,0 +1,22 @@
+{
+ "schema": "public-benchmark-invalid-v1",
+ "policy": "Shown in every report and never scored; excluded from counts and means.",
+ "positions": [
+  {
+   "deck": "pptarena-013",
+   "deck_sha256": "228745f5e0604d89681f553f917506bb5204659adeb7d2bf7685240ae30936e4",
+   "slides": [
+    12,
+    18,
+    19,
+    20,
+    22,
+    23,
+    27,
+    30
+   ],
+   "reason": "required glyphs absent from the frozen font set",
+   "detail": "Wingdings 2 bullet U+F096 has no freely licensed font in the frozen set; the LibreOffice PDF font proof cannot be satisfied."
+  }
+ ]
+}
