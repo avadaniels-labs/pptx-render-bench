@@ -1,5 +1,19 @@
 # Changelog
 
+## 1.2.0 (2026-11-25)
+
+- **Extra baselines** on the same references, scorer, exact canvas and 195-file font set
+  (`results/baselines/`):
+  - **ONLYOFFICE x2t** from DocumentBuilder 10.0.0 linux-aarch64 (AGPL-3.0, release asset SHA-256
+    `6bb52e1b6e02c2f463a91d3b5b0cf04fe43e3f38cedd058f40e8a275da172233`). PPTArena: 791 / 1 / 187
+    against LibreOffice, mean 0.9120. HF50: 639 / 0 / 256, mean 0.9267. No failures.
+  - **Apache POI XSLF 5.4.1** (Apache-2.0, Java 21). PPTArena: 163 / 1 / 815 against LibreOffice,
+    including 1 failure, mean 0.8368. HF50: 305 / 0 / 590, including 4 failures, mean 0.8977.
+- ONLYOFFICE outperforms LibreOffice and beats Folio on 201 PPTArena slides and 15 HF50 slides.
+  The per-slide "at least as high" claim holds against LibreOffice only.
+- The Folio (Rust renderer, build v45) and LibreOffice results are unchanged from 1.1.0.
+- Paper: new Section 7 (baselines). The abstract and limitations are updated. Author: Velislava Yanchina.
+
 ## 1.1.0 (2026-11-25)
 
 - **No invalid slides.** The shared font set gains one face, making 195: "Wingdings 2" geometric bullets,
@@ -10,7 +24,7 @@
   proof and are scored; Rust beats LibreOffice on all eight.
 - Same Rust binary (v45, `e2361017...`), LibreOffice, references, scorer and corpora as 1.0.0.
 - New results: `results/pptarena-v45-font195.*` (runs 45587503935) and `results/hf50-v45-font195.*`
-  (run 45587509588). PPTArena: 978 / 979 Rust >= LibreOffice, mean 0.9438 vs 0.8881; the only loss is still
+  (run 45587509588). PPTArena: 978 / 979 Folio >= LibreOffice, mean 0.9438 vs 0.8881; the only loss is still
   the accepted exception 080/7, unchanged. HF50: 895 / 895, unchanged from 1.0.0.
 - Only decks 010 and 013 changed in PPTArena (the decks that use Wingdings 2); 010/28 is the one slide whose
   Rust score went down (0.8688 to 0.8625, LibreOffice 0.7874).

@@ -1,0 +1,28 @@
+{
+ "renderer": "Apache POI XSLF 5.4.1 (Java 21, Temurin)",
+ "run": 45602134439,
+ "pptarena": {
+  "slides": 979,
+  "scored": 978,
+  "failures": 1,
+  "wins": 163,
+  "ties": 1,
+  "losses_scored": 814,
+  "losses_incl_failures": 815,
+  "mean_ssim": 0.8368,
+  "lo_mean_same_slides": 0.8881,
+  "rust_mean_same_slides": 0.9439
+ },
+ "hf50": {
+  "slides": 895,
+  "scored": 891,
+  "failures": 4,
+  "wins": 305,
+  "ties": 0,
+  "losses_scored": 586,
+  "losses_incl_failures": 590,
+  "mean_ssim": 0.8977,
+  "lo_mean_same_slides": 0.9092,
+  "rust_mean_same_slides": 0.9703
+ }
+}

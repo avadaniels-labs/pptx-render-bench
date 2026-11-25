@@ -1,39 +1,39 @@
-# PPTX rendering fidelity benchmark, v1.1.0 (frozen build v45, 195-font profile)
+# PPTX rendering fidelity benchmark, v1.2.0 (frozen build v45, 195-font profile)
 
 This benchmark asks how closely an offline renderer reproduces Microsoft PowerPoint's own slide images.
 Each slide of each deck is rendered by two engines on Linux:
 
-- **Rust**: an experimental PPTX renderer (DrawingML to SVG to raster). Frozen build v45, binary SHA-256
+- **Folio**: an experimental PPTX renderer written in Rust (DrawingML to SVG to raster). Frozen build v45, binary SHA-256
   `e23610171a6a6635af26369f1e065b55122d29e6cd364324d2cc276c29bf623d`. Its source is not part of this package.
 - **LibreOffice 26.8.3.1** (`861effc5289d539f15c4c18d1ba8579ffd78728b`), the official Linux aarch64 deb tarball
   (SHA-256 `378a0766e4a815a5a96fb7473f346d072e23e3cc28606bdc8cd6f834cfaa14db`).
 
 Both renders are scored with SSIM against PowerPoint's PNG export of the same slide. A slide counts as a
-Rust win when `rust_ssim >= lo_ssim`. Exact ties count as wins, and no epsilon is applied.
+Folio win when `rust_ssim >= lo_ssim`. Exact ties count as wins, and no epsilon is applied.
 
 This package holds **metadata only**: per-slide scores, hashes, fetch scripts, the font profile and the scorer.
 It contains no decks and no images (see [What is not included and why](#what-is-not-included-and-why)).
 
-## Headline results (release 1.1.0)
+## Headline results (Folio (build v45) and LibreOffice, unchanged since release 1.1.0)
 
 The numbers below are the output of `python3 results/summarize.py`, which reads only the committed CSVs
 (`results/*-v45-font195.csv`).
 
-| Corpus | Decks | Slides scored | Rust >= LibreOffice | Mean SSIM, Rust | Mean SSIM, LibreOffice | Smallest margin |
+| Corpus | Decks | Slides scored | Folio >= LibreOffice | Mean SSIM, Folio | Mean SSIM, LibreOffice | Smallest margin |
 |---|---:|---:|---:|---:|---:|---:|
 | PPTArena | 99 | 979 (0 invalid) | **978 / 979** | **0.9438** | 0.8881 | -0.00199 (080/7) |
 | HF50 | 45 | 895 | **895 / 895** | **0.9697** | 0.9085 | +0.00024 |
 
-- **One exception, PPTArena 080 slide 7** (Rust 0.8741, LibreOffice 0.8761). It is scored and reported as a
+- **One exception, PPTArena 080 slide 7** (Folio 0.8741, LibreOffice 0.8761). It is scored and reported as a
   loss, not excluded. The slide body is an `mc:AlternateContent` equation. PowerPoint draws the live OMML
-  branch with Cambria Math, whose glyph ink grows the line height. LibreOffice and the Rust renderer both
+  branch with Cambria Math, whose glyph ink grows the line height. LibreOffice and Folio both
   draw the stored fallback picture. No freely licensed font reproduces Cambria Math's metrics. See
   `results/exceptions.json`.
 - **No invalid slides.** In release 1.0.0, eight PPTArena deck-013 slides (12, 18, 19, 20, 22, 23, 27, 30) were
   invalid: they use the Wingdings 2 bullet U+F096, which no font in the 194-font set covered, so the LibreOffice
   PDF font proof could not pass. Release 1.1.0 adds one generated CC0 font, "Wingdings 2" geometric bullets
   (`fonts/build_wingdings2_geometric.py`), to the shared set. All eight slides now prove and are scored, and
-  Rust beats LibreOffice on each (smallest margin +0.046). The renderer binary is unchanged. See
+  Folio beats LibreOffice on each (smallest margin +0.046). The renderer binary is unchanged. See
   `results/invalid.json` and [CHANGELOG.md](CHANGELOG.md).
 - Means are arithmetic means over the scored (distinct deck SHA-256, slide index) pairs. The PPTArena means
   moved from 0.9439 / 0.8884 to 0.9438 / 0.8881 because the eight new slides are now included.
@@ -51,17 +51,20 @@ Every shard rendered, scored and passed its own independent verification step, w
 hashes and SSIM from the produced bytes. Both runs completed successfully. The per-slide rows were read from the
 verified shard artifacts. Every HF50 deck reports `pass_complete_deck` with the same binary hash. Compared with
 release 1.0.0 (runs 45544908167 and 45544912297), no HF50 score changed. In PPTArena, only decks 010 and 013
-changed, because they are the only decks that use Wingdings 2. 16 of deck 010's changed slides went up for Rust
+changed, because they are the only decks that use Wingdings 2. 16 of deck 010's changed slides went up for Folio
 and one went down (010/28: 0.8688 to 0.8625, against LibreOffice's 0.7874).
 
 ## Leaderboard
 
 | Renderer | PPTArena W / T / L vs LibreOffice | PPTArena mean SSIM | HF50 W / T / L vs LibreOffice | HF50 mean SSIM |
 |---|---:|---:|---:|---:|
-| Rust renderer v45 | 977 / 1 / 1 of 979 | 0.9438 | 895 / 0 / 0 of 895 | 0.9697 |
+| Folio (build v45) | 977 / 1 / 1 of 979 | 0.9438 | 895 / 0 / 0 of 895 | 0.9697 |
 | LibreOffice 26.8.3.1 | baseline | 0.8881 | baseline | 0.9085 |
+| ONLYOFFICE x2t 10.0.0 | 791 / 1 / 187 of 979 | 0.9120 | 639 / 0 / 256 of 895 | 0.9267 |
+| Apache POI XSLF 5.4.1 | 163 / 1 / 815 of 979 (incl. 1 failure) | 0.8368 | 305 / 0 / 590 of 895 (incl. 4 failures) | 0.8977 |
 
-See [LEADERBOARD.md](LEADERBOARD.md). To add a renderer, see [SUBMITTING.md](SUBMITTING.md).
+The ONLYOFFICE and POI rows are extra baselines run on the same references, scorer and font set
+(`results/baselines/`); see [LEADERBOARD.md](LEADERBOARD.md) for their settings. To add a renderer, see [SUBMITTING.md](SUBMITTING.md).
 
 ## Method
 
@@ -77,7 +80,7 @@ kept exactly as exported, with no resizing, cropping or alignment. Slide order f
 every reference PNG is in the `powerpoint_png_sha256` column of the results.
 
 **Canvas.** Each engine renders directly to the reference's exact pixel size. LibreOffice exports a PDF
-(`soffice --headless --convert-to pdf`), which is rasterized straight to the target canvas. Rust renders at
+(`soffice --headless --convert-to pdf`), which is rasterized straight to the target canvas. Folio renders at
 that size. No image is resampled or registered, and no region is masked.
 
 **Score.** `skimage.metrics.structural_similarity` on RGB uint8 arrays with `channel_axis=2`, `data_range=255`,
@@ -92,7 +95,7 @@ the generated Wingdings 2 face). The system font paths are isolated and fontconf
 A LibreOffice slide counts only if a PDF font proof shows that every embedded font subset comes from a
 font in the frozen set. A slide that fails the proof is a validation failure, never a silent pass.
 
-**Rust renderer settings** used for every slide: `PPTX_TEXT_EXPERIMENT_DEVICE_MATTE=opaque_solid`,
+**Folio settings** used for every slide: `PPTX_TEXT_EXPERIMENT_DEVICE_MATTE=opaque_solid`,
 `PPTX_TEXT_EXPERIMENT_METRICS=os2_points`, `PPTX_TEXT_EXPERIMENT_PICTURE_JPEG=native_raster`.
 
 ## Corpora
@@ -114,6 +117,9 @@ results/   pptarena-v45-font195.{csv,json}               release 1.1.0 per-slide
            hf50-v45-font195.{csv,json}                   lo_ssim, delta, status, powerpoint_png_sha256
            pptarena-v45.{csv,json}, hf50-v45.{csv,json}   release 1.0.0 rows (194-font profile)
            exceptions.json, invalid.json, summary.json, summarize.py
+           baselines/                                    extra baselines (ONLYOFFICE x2t 10.0.0, Apache POI 5.4.1):
+                                                         deck, slide, candidate_ssim, lo_ssim, delta, status,
+                                                         error, powerpoint_png_sha256; plus summaries
 corpus/    pptarena-decks.json, hf50-decks.json          pinned download URL, sha256, size, slide count
            fetch_corpus.py                               download + sha256 check (stdlib only)
 fonts/     font-profile-195.json                         every font: sha256, size, licence, how to obtain it
@@ -128,7 +134,7 @@ scoring/   ssim.py                                       the slide score
            check_reference.py                            compare your PowerPoint exports to the scored hashes
 ```
 
-The `status` column holds `pass`, `loss` or `invalid`. `delta` is `rust_ssim - lo_ssim` and is empty when
+`rust_ssim` is Folio's score (the column name is kept for schema stability). The `status` column holds `pass`, `loss` or `invalid`. `delta` is `rust_ssim - lo_ssim` and is empty when
 the slide is invalid.
 
 ## Reproducing
@@ -157,7 +163,7 @@ the slide is invalid.
 5. **Score.** `python3 scoring/ssim.py refs/<deck>/slide-NN.png candidate.png` for each slide, then compare
    with `lo_ssim` / `rust_ssim` in `results/`. `python3 results/summarize.py` recomputes the headline table.
 
-The Rust arm cannot be reproduced from this package, because the renderer is not published here. Its
+The Folio arm cannot be reproduced from this package, because the renderer is not published here. Its
 per-slide scores and the hashes of the references they were measured against are recorded in `results/`.
 
 ## What is not included and why
@@ -166,7 +172,7 @@ per-slide scores and the hashes of the references they were measured against are
   MIT, but its decks are third-party presentations with no per-file source or licence metadata.
   `noxneural/pptx_collection_templates` at the pinned revision has no per-deck licence either. Decks are
   referenced by pinned URL and SHA-256 only.
-- **PowerPoint reference PNGs, Rust and LibreOffice renders, and diff images.** They are derived from those
+- **PowerPoint reference PNGs, Folio, LibreOffice and baseline renders, and diff images.** They are derived from those
   decks, so the same restriction applies. Only their SHA-256 digests are published.
 - **Microsoft core fonts** (Arial, Times New Roman, Courier New, Georgia, Verdana, Trebuchet MS, Comic Sans
   MS, Impact, Andale Mono, Webdings, Arial Black). Their EULA does not allow redistribution outside the

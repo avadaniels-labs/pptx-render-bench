@@ -1,0 +1,31 @@
+{
+ "renderer": "ONLYOFFICE x2t from DocumentBuilder 10.0.0 linux-aarch64 (AGPL-3.0)",
+ "run": 45603578912,
+ "font_files_indexed": 192,
+ "pptarena": {
+  "slides": 979,
+  "scored": 979,
+  "failures": 0,
+  "wins": 791,
+  "ties": 1,
+  "losses_scored": 187,
+  "losses_incl_failures": 187,
+  "mean_ssim": 0.912,
+  "lo_mean_same_slides": 0.8881,
+  "rust_mean_same_slides": 0.9438,
+  "rust_ge_candidate": 778
+ },
+ "hf50": {
+  "slides": 895,
+  "scored": 895,
+  "failures": 0,
+  "wins": 639,
+  "ties": 0,
+  "losses_scored": 256,
+  "losses_incl_failures": 256,
+  "mean_ssim": 0.9267,
+  "lo_mean_same_slides": 0.9085,
+  "rust_mean_same_slides": 0.9697,
+  "rust_ge_candidate": 880
+ }
+}

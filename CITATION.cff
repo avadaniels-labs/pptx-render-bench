@@ -5,7 +5,7 @@ authors:
   - family-names: "Yanchina"
     given-names: "Velislava"
     affiliation: "avadaniels-labs"
-version: 1.1.0
+version: 1.2.0
 date-released: 2026-11-25
 license: Apache-2.0
 repository-code: "https://github.com/avadaniels-labs/pptx-render-bench"
