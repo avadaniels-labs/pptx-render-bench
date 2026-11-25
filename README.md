@@ -53,11 +53,12 @@ renderer source commit.
 
 | Renderer | PPTArena W / T / L vs LibreOffice | PPTArena mean SSIM | HF50 W / T / L vs LibreOffice | HF50 mean SSIM |
 |---|---:|---:|---:|---:|
-| Rust renderer v45 | 969 / 1 / 1 of 971\* | 0.9439\* | 895 / 0 / 0 of 895 | 0.9697 |
-| LibreOffice 26.8.3.1 | baseline | 0.8884\* | baseline | 0.9085 |
+| Rust renderer v45 | 969 / 1 / 1 of 971 (+8 invalid) | 0.9439 | 895 / 0 / 0 of 895 | 0.9697 |
+| LibreOffice 26.8.3.1 | baseline | 0.8884 | baseline | 0.9085 |
 
-\* Provisional until the deck-013 rerun lands (see [LEADERBOARD.md](LEADERBOARD.md)). To add a renderer, see
-[SUBMITTING.md](SUBMITTING.md).
+These are the v1.0.0 results. The eight invalid PPTArena slides (deck 013) are listed in `results/invalid.json`
+and are not scored; a follow-up release will score them. See [LEADERBOARD.md](LEADERBOARD.md); to add a
+renderer, see [SUBMITTING.md](SUBMITTING.md).
 
 ## Method
 
