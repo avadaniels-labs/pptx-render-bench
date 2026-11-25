@@ -193,4 +193,4 @@ per-slide scores and the hashes of the references they were measured against are
   `fonts/licenses/Wingdings2-Geometric-CC0-1.0.txt`). It is not Microsoft's Wingdings 2.
 - The decks, reference images and fonts referenced by the fetch scripts are not covered by these licences.
 
-To cite, see [CITATION.cff](CITATION.cff).
+To cite, see [CITATION.cff](CITATION.cff). A 3-page write-up is in [paper/](paper/pptx-render-bench.md) ([PDF](paper/pptx-render-bench.pdf)).
