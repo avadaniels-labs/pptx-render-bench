@@ -49,6 +49,16 @@ cross-shard aggregate steps did not admit a result. The per-slide rows here were
 artifacts and aggregated offline. Every HF50 deck reports `pass_complete_deck` with the same binary hash and
 renderer source commit.
 
+## Leaderboard
+
+| Renderer | PPTArena W / T / L vs LibreOffice | PPTArena mean SSIM | HF50 W / T / L vs LibreOffice | HF50 mean SSIM |
+|---|---:|---:|---:|---:|
+| Rust renderer v45 | 969 / 1 / 1 of 971\* | 0.9439\* | 895 / 0 / 0 of 895 | 0.9697 |
+| LibreOffice 26.8.3.1 | baseline | 0.8884\* | baseline | 0.9085 |
+
+\* Provisional until the deck-013 rerun lands (see [LEADERBOARD.md](LEADERBOARD.md)). To add a renderer, see
+[SUBMITTING.md](SUBMITTING.md).
+
 ## Method
 
 **Reference images.** Microsoft PowerPoint for Mac 16.113.3 (build 16.113.26092714) on macOS 27.0
@@ -161,3 +171,15 @@ per-slide scores and the hashes of the references they were measured against are
   exception), Twemoji Mozilla, and Noto Sans SC (OFL, about 21 MB of derived instances). They are fetched
   by script or derived, not vendored, to keep this package small.
 - **Renderer and evaluation-harness code.** These are not published with this release.
+
+## License
+
+- **Code** (`scoring/`, `corpus/*.py`, `fonts/*.py`, `results/*.py`): Apache License 2.0, see [LICENSE](LICENSE).
+- **Results and manifests** (`results/*.csv|json`, `corpus/*.json`, `fonts/*.json`, `fonts/fontconfig/*.json`,
+  this documentation): Creative Commons Attribution 4.0 International, see [LICENSE-DATA](LICENSE-DATA).
+- **Third-party files keep their own licences:** `fonts/vendor/` (Open Sans, OFL-1.1), `fonts/licenses/` (the
+  licence texts themselves) and `fonts/fontconfig/rules/` (fontconfig and DejaVu configuration files from
+  Ubuntu 24.04's fontconfig packages, under their upstream licences).
+- The decks, reference images and fonts referenced by the fetch scripts are not covered by these licences.
+
+To cite, see [CITATION.cff](CITATION.cff).

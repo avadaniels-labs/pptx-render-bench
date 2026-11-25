@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you use this benchmark, please cite it as below."
+title: "pptx-render-bench"
+authors:
+  - name: "Ava Daniels"
+version: 1.0.0
+date-released: 2026-11-25
+license: Apache-2.0
+repository-code: "https://github.com/avadaniels-labs/pptx-render-bench"
+abstract: "SSIM fidelity of offline PPTX renderers against PowerPoint for Mac PNG exports on the PPTArena and HF50 public deck corpora (metadata only: per-slide scores, reference hashes, pinned corpus and font manifests, scorer)."
+keywords: [pptx, powerpoint, rendering, benchmark, ssim, libreoffice]
